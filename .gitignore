@@ -1,0 +1,14 @@
+# File temporanei
+*.log
+*.tmp
+
+# File SQLite
+*.sqlite
+*.db
+
+# Dump MySQL (opzionale)
+*.sql
+
+# Backup
+*.bak
+*.old

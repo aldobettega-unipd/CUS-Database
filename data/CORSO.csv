@@ -1,0 +1,49 @@
+sport,nome,categoria,sesso
+SP001,Corso Avanzato di Calcio,Avanzato,U
+SP001,Corso Intermedio di Calcio,Intermedio,U
+SP001,Corso Intermedio di Calcio,Intermedio,F
+SP002,Corso Avanzato di Basket,Avanzato,M
+SP002,Corso Base di Basket,Base,M
+SP002,Corso Base di Basket,Base,F
+SP002,Corso Intermedio di Basket,Intermedio,U
+SP003,Corso Avanzato di Pallavolo,Avanzato,F
+SP003,Corso Base di Pallavolo,Base,F
+SP003,Corso Avanzato di Pallavolo,Avanzato,M
+SP004,Corso Base di Nuoto,Base,F
+SP004,Corso Avanzato di Nuoto,Avanzato,U
+SP004,Corso Avanzato di Nuoto,Avanzato,F
+SP005,Corso Intermedio di Tennis,Intermedio,F
+SP005,Corso Avanzato di Tennis,Avanzato,U
+SP006,Corso Avanzato di Atletica,Avanzato,U
+SP006,Corso Avanzato di Atletica,Avanzato,U
+SP006,Corso Base di Atletica,Base,U
+SP007,Corso Avanzato di Yoga,Avanzato,U
+SP007,Corso Avanzato di Yoga,Avanzato,M
+SP007,Corso Base di Yoga,Base,M
+SP008,Corso Intermedio di Arti Marziali,Intermedio,M
+SP008,Corso Avanzato di Arti Marziali,Avanzato,M
+SP008,Corso Base di Arti Marziali,Base,F
+SP009,Corso Base di Scherma,Base,U
+SP009,Corso Avanzato di Scherma,Avanzato,U
+SP010,Corso Intermedio di Arrampicata,Intermedio,F
+SP010,Corso Base di Arrampicata,Base,F
+SP011,Corso Intermedio di Ciclismo,Intermedio,M
+SP011,Corso Intermedio di Ciclismo,Intermedio,F
+SP011,Corso Avanzato di Ciclismo,Avanzato,M
+SP012,Corso Intermedio di Rugby,Intermedio,M
+SP012,Corso Base di Rugby,Base,F
+SP012,Corso Intermedio di Rugby,Intermedio,M
+SP012,Corso Base di Rugby,Base,F
+SP013,Corso Avanzato di Boxe,Avanzato,U
+SP013,Corso Base di Boxe,Base,M
+SP013,Corso Base di Boxe,Base,F
+SP013,Corso Intermedio di Boxe,Intermedio,F
+SP014,Corso Intermedio di Ping Pong,Intermedio,F
+SP014,Corso Base di Ping Pong,Base,F
+SP015,Corso Intermedio di Pattinaggio,Intermedio,F
+SP015,Corso Avanzato di Pattinaggio,Avanzato,F
+SP015,Corso Intermedio di Pattinaggio,Intermedio,F
+SP016,Corso Avanzato di Palestra,Avanzato,M
+SP016,Corso Intermedio di Palestra,Intermedio,F
+SP016,Corso Base di Palestra,Base,M
+SP016,Corso Base di Palestra,Base,U

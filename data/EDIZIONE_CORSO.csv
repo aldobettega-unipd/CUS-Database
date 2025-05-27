@@ -1,0 +1,349 @@
+codice,data_inizio,data_fine,n_partecipanti,costo,corso
+ED001,2023-09-18,2023-11-24,16,226.98,Corso Avanzato di Calcio
+ED002,2024-03-20,2024-06-18,14,78.55,Corso Avanzato di Calcio
+ED003,2023-09-30,2023-12-08,8,128.06,Corso Avanzato di Calcio
+ED004,2023-09-26,2023-11-04,12,159.73,Corso Avanzato di Calcio
+ED005,2024-07-11,2024-10-03,14,174.14,Corso Avanzato di Calcio
+ED006,2023-01-28,2023-04-04,12,153.62,Corso Avanzato di Calcio
+ED007,2023-04-11,2023-06-07,6,68.73,Corso Avanzato di Calcio
+ED008,2023-10-09,2023-12-21,8,161.85,Corso Avanzato di Calcio
+ED009,2024-02-17,2024-04-22,13,220.35,Corso Avanzato di Calcio
+ED010,2024-09-20,2024-12-05,11,64.24,Corso Intermedio di Calcio
+ED011,2023-03-03,2023-05-26,5,244.2,Corso Intermedio di Calcio
+ED012,2023-02-07,2023-03-10,18,77.16,Corso Intermedio di Calcio
+ED013,2023-08-21,2023-10-10,6,139.07,Corso Intermedio di Calcio
+ED014,2023-02-09,2023-04-30,18,249.8,Corso Intermedio di Calcio
+ED015,2024-02-29,2024-04-25,9,99.84,Corso Intermedio di Calcio
+ED016,2024-12-12,2025-02-05,20,106.98,Corso Intermedio di Calcio
+ED017,2024-05-16,2024-08-07,13,122.23,Corso Intermedio di Calcio
+ED018,2023-04-04,2023-06-03,10,170.01,Corso Intermedio di Calcio
+ED019,2023-07-21,2023-10-05,17,88.94,Corso Intermedio di Calcio
+ED020,2023-06-11,2023-08-25,9,69.14,Corso Intermedio di Calcio
+ED021,2024-06-09,2024-09-04,9,159.89,Corso Intermedio di Calcio
+ED022,2023-04-17,2023-05-20,7,64.69,Corso Avanzato di Basket
+ED023,2024-07-26,2024-09-16,20,57.72,Corso Avanzato di Basket
+ED024,2023-12-31,2024-02-28,11,73.76,Corso Avanzato di Basket
+ED025,2024-02-12,2024-03-24,10,205.53,Corso Avanzato di Basket
+ED026,2024-02-06,2024-03-20,14,223.27,Corso Avanzato di Basket
+ED027,2023-08-02,2023-09-13,8,105.3,Corso Base di Basket
+ED028,2023-09-02,2023-10-08,19,133.62,Corso Base di Basket
+ED029,2024-02-07,2024-04-22,16,182.34,Corso Base di Basket
+ED030,2023-09-15,2023-11-25,16,51.11,Corso Base di Basket
+ED031,2023-02-25,2023-05-10,17,168.34,Corso Base di Basket
+ED032,2024-02-07,2024-03-10,10,140.69,Corso Base di Basket
+ED033,2024-03-03,2024-05-15,10,248.86,Corso Base di Basket
+ED034,2024-10-20,2025-01-17,8,157.42,Corso Base di Basket
+ED035,2024-07-10,2024-08-22,20,109.73,Corso Base di Basket
+ED036,2023-06-20,2023-08-27,11,144.85,Corso Base di Basket
+ED037,2023-02-18,2023-04-27,10,115.38,Corso Base di Basket
+ED038,2023-01-04,2023-02-15,17,114.34,Corso Base di Basket
+ED039,2023-03-05,2023-04-17,20,116.62,Corso Base di Basket
+ED040,2023-09-23,2023-11-14,10,231.23,Corso Intermedio di Basket
+ED041,2023-03-16,2023-04-27,9,211.92,Corso Intermedio di Basket
+ED042,2023-02-15,2023-05-14,17,210.52,Corso Intermedio di Basket
+ED043,2023-10-15,2023-11-23,12,99.21,Corso Intermedio di Basket
+ED044,2023-08-25,2023-10-28,15,162.27,Corso Intermedio di Basket
+ED045,2023-04-08,2023-06-28,6,85.54,Corso Intermedio di Basket
+ED046,2024-12-06,2025-02-09,9,201.95,Corso Avanzato di Pallavolo
+ED047,2024-06-17,2024-08-30,12,154.75,Corso Avanzato di Pallavolo
+ED048,2023-02-14,2023-04-11,8,85.41,Corso Avanzato di Pallavolo
+ED049,2023-04-22,2023-06-07,8,157.49,Corso Avanzato di Pallavolo
+ED050,2024-01-22,2024-03-13,8,197.32,Corso Avanzato di Pallavolo
+ED051,2024-11-14,2024-12-28,7,156.77,Corso Base di Pallavolo
+ED052,2024-10-28,2024-12-23,10,222.59,Corso Base di Pallavolo
+ED053,2024-07-08,2024-10-05,19,56.54,Corso Base di Pallavolo
+ED054,2023-07-26,2023-09-28,7,227.92,Corso Base di Pallavolo
+ED055,2024-11-25,2025-02-20,16,212.79,Corso Base di Pallavolo
+ED056,2023-03-27,2023-05-19,9,81.61,Corso Base di Pallavolo
+ED057,2023-03-10,2023-04-29,12,175.28,Corso Avanzato di Pallavolo
+ED058,2023-05-12,2023-06-13,13,180.69,Corso Avanzato di Pallavolo
+ED059,2024-12-11,2025-03-04,16,146.33,Corso Avanzato di Pallavolo
+ED060,2023-02-20,2023-05-10,10,106.26,Corso Avanzato di Pallavolo
+ED061,2023-07-22,2023-09-05,18,145.58,Corso Avanzato di Pallavolo
+ED062,2023-08-03,2023-10-20,18,214.31,Corso Avanzato di Pallavolo
+ED063,2023-03-18,2023-05-13,12,57.57,Corso Base di Nuoto
+ED064,2024-08-23,2024-11-15,14,105.66,Corso Base di Nuoto
+ED065,2024-07-16,2024-09-24,11,62.64,Corso Base di Nuoto
+ED066,2023-12-29,2024-02-06,11,229.33,Corso Base di Nuoto
+ED067,2023-06-24,2023-07-24,7,61.61,Corso Base di Nuoto
+ED068,2023-09-15,2023-10-29,5,142.42,Corso Base di Nuoto
+ED069,2023-09-04,2023-10-21,18,94.83,Corso Base di Nuoto
+ED070,2024-04-09,2024-06-16,17,244.05,Corso Base di Nuoto
+ED071,2024-11-08,2024-12-09,12,218.22,Corso Avanzato di Nuoto
+ED072,2023-10-25,2024-01-11,15,239.87,Corso Avanzato di Nuoto
+ED073,2023-11-11,2023-12-11,20,189.16,Corso Avanzato di Nuoto
+ED074,2024-07-23,2024-10-10,16,107.71,Corso Avanzato di Nuoto
+ED075,2023-03-09,2023-05-08,17,190.89,Corso Avanzato di Nuoto
+ED076,2024-06-30,2024-09-09,9,213.46,Corso Avanzato di Nuoto
+ED077,2023-08-07,2023-09-30,6,226.84,Corso Avanzato di Nuoto
+ED078,2023-05-12,2023-08-07,19,73.32,Corso Avanzato di Nuoto
+ED079,2024-01-26,2024-03-11,11,156.61,Corso Avanzato di Nuoto
+ED080,2023-07-04,2023-08-12,12,134.3,Corso Avanzato di Nuoto
+ED081,2023-09-28,2023-10-28,13,246.36,Corso Avanzato di Nuoto
+ED082,2024-02-02,2024-04-14,10,234.81,Corso Avanzato di Nuoto
+ED083,2023-05-12,2023-07-02,18,178.59,Corso Avanzato di Nuoto
+ED084,2024-05-01,2024-07-04,19,117.0,Corso Intermedio di Tennis
+ED085,2024-07-13,2024-10-04,6,105.54,Corso Intermedio di Tennis
+ED086,2024-06-11,2024-09-02,12,142.71,Corso Intermedio di Tennis
+ED087,2023-10-28,2023-11-27,6,148.5,Corso Intermedio di Tennis
+ED088,2024-09-06,2024-10-31,17,174.85,Corso Intermedio di Tennis
+ED089,2024-06-16,2024-08-03,13,174.16,Corso Intermedio di Tennis
+ED090,2024-04-01,2024-05-07,18,51.19,Corso Intermedio di Tennis
+ED091,2023-09-26,2023-12-15,16,205.48,Corso Avanzato di Tennis
+ED092,2023-10-11,2024-01-05,8,222.95,Corso Avanzato di Tennis
+ED093,2024-08-16,2024-10-25,18,131.88,Corso Avanzato di Tennis
+ED094,2024-01-12,2024-02-15,7,53.38,Corso Avanzato di Tennis
+ED095,2023-03-14,2023-05-07,13,227.73,Corso Avanzato di Tennis
+ED096,2023-07-13,2023-09-12,7,177.34,Corso Avanzato di Tennis
+ED097,2024-02-20,2024-03-31,11,57.47,Corso Avanzato di Tennis
+ED098,2023-04-21,2023-07-16,9,99.9,Corso Avanzato di Tennis
+ED099,2023-04-23,2023-06-16,11,50.52,Corso Avanzato di Tennis
+ED100,2023-04-19,2023-06-24,13,147.06,Corso Avanzato di Tennis
+ED101,2023-01-11,2023-02-26,19,244.03,Corso Avanzato di Atletica
+ED102,2023-02-02,2023-04-18,11,96.95,Corso Avanzato di Atletica
+ED103,2023-12-26,2024-01-29,12,74.52,Corso Avanzato di Atletica
+ED104,2024-12-28,2025-02-14,6,223.12,Corso Avanzato di Atletica
+ED105,2024-10-19,2025-01-15,7,164.17,Corso Avanzato di Atletica
+ED106,2023-02-06,2023-04-28,11,84.38,Corso Avanzato di Atletica
+ED107,2023-03-08,2023-04-30,8,157.44,Corso Avanzato di Atletica
+ED108,2024-07-11,2024-09-23,6,151.19,Corso Avanzato di Atletica
+ED109,2023-12-20,2024-03-03,13,183.51,Corso Avanzato di Atletica
+ED110,2023-06-16,2023-08-22,14,204.74,Corso Avanzato di Atletica
+ED111,2023-10-17,2023-11-25,5,221.38,Corso Avanzato di Atletica
+ED112,2024-11-10,2024-12-15,13,240.37,Corso Avanzato di Atletica
+ED113,2024-09-29,2024-11-01,12,148.64,Corso Avanzato di Atletica
+ED114,2023-06-10,2023-08-13,8,151.0,Corso Avanzato di Atletica
+ED115,2023-02-27,2023-05-09,11,103.09,Corso Avanzato di Atletica
+ED116,2023-09-02,2023-11-28,18,178.82,Corso Base di Atletica
+ED117,2023-06-19,2023-08-02,9,63.69,Corso Base di Atletica
+ED118,2024-01-20,2024-02-27,6,113.15,Corso Base di Atletica
+ED119,2023-07-08,2023-09-02,14,192.47,Corso Base di Atletica
+ED120,2023-09-01,2023-10-29,14,229.64,Corso Base di Atletica
+ED121,2024-04-17,2024-06-06,18,79.07,Corso Base di Atletica
+ED122,2024-12-08,2025-03-01,10,134.46,Corso Base di Atletica
+ED123,2024-11-02,2024-12-20,13,156.22,Corso Avanzato di Yoga
+ED124,2023-03-25,2023-06-22,5,190.58,Corso Avanzato di Yoga
+ED125,2023-08-29,2023-11-17,6,76.67,Corso Avanzato di Yoga
+ED126,2024-12-28,2025-03-09,6,132.68,Corso Avanzato di Yoga
+ED127,2024-08-05,2024-10-27,13,188.5,Corso Avanzato di Yoga
+ED128,2024-07-21,2024-09-22,14,64.66,Corso Avanzato di Yoga
+ED129,2023-02-05,2023-05-03,9,116.95,Corso Avanzato di Yoga
+ED130,2023-02-21,2023-04-01,11,126.66,Corso Avanzato di Yoga
+ED131,2024-06-27,2024-08-15,7,119.68,Corso Avanzato di Yoga
+ED132,2024-03-29,2024-05-08,15,175.31,Corso Avanzato di Yoga
+ED133,2023-01-26,2023-03-01,8,240.42,Corso Avanzato di Yoga
+ED134,2024-12-01,2025-02-28,12,169.53,Corso Avanzato di Yoga
+ED135,2023-08-23,2023-11-19,20,249.71,Corso Avanzato di Yoga
+ED136,2023-06-24,2023-08-25,11,59.03,Corso Avanzato di Yoga
+ED137,2024-05-16,2024-07-03,11,225.74,Corso Avanzato di Yoga
+ED138,2024-02-19,2024-05-10,8,80.3,Corso Base di Yoga
+ED139,2024-06-18,2024-08-17,11,201.81,Corso Base di Yoga
+ED140,2024-04-21,2024-06-29,18,118.75,Corso Base di Yoga
+ED141,2023-05-18,2023-07-08,12,116.49,Corso Base di Yoga
+ED142,2023-12-08,2024-02-20,20,89.42,Corso Base di Yoga
+ED143,2023-04-17,2023-06-05,10,67.2,Corso Base di Yoga
+ED144,2024-12-05,2025-02-14,9,122.51,Corso Base di Yoga
+ED145,2023-05-21,2023-07-05,10,87.82,Corso Base di Yoga
+ED146,2023-11-15,2024-01-01,16,192.64,Corso Base di Yoga
+ED147,2023-07-08,2023-09-05,10,163.69,Corso Intermedio di Arti Marziali
+ED148,2023-08-20,2023-11-16,15,71.15,Corso Intermedio di Arti Marziali
+ED149,2023-05-28,2023-07-09,14,237.95,Corso Intermedio di Arti Marziali
+ED150,2023-11-19,2024-01-07,20,134.88,Corso Intermedio di Arti Marziali
+ED151,2023-06-30,2023-08-14,9,172.76,Corso Intermedio di Arti Marziali
+ED152,2024-10-04,2024-11-18,12,74.14,Corso Intermedio di Arti Marziali
+ED153,2023-07-10,2023-09-24,9,242.83,Corso Intermedio di Arti Marziali
+ED154,2024-03-28,2024-05-31,18,186.75,Corso Intermedio di Arti Marziali
+ED155,2024-10-31,2024-12-11,18,129.17,Corso Intermedio di Arti Marziali
+ED156,2023-05-06,2023-06-12,10,72.96,Corso Intermedio di Arti Marziali
+ED157,2024-07-07,2024-09-08,18,55.45,Corso Avanzato di Arti Marziali
+ED158,2024-12-15,2025-02-19,17,170.4,Corso Avanzato di Arti Marziali
+ED159,2024-07-17,2024-09-19,20,185.33,Corso Avanzato di Arti Marziali
+ED160,2023-10-06,2024-01-04,16,136.46,Corso Avanzato di Arti Marziali
+ED161,2023-09-02,2023-11-24,8,149.88,Corso Avanzato di Arti Marziali
+ED162,2023-06-10,2023-07-26,17,149.65,Corso Avanzato di Arti Marziali
+ED163,2023-06-25,2023-09-13,14,249.78,Corso Avanzato di Arti Marziali
+ED164,2023-10-20,2023-12-23,10,147.87,Corso Avanzato di Arti Marziali
+ED165,2023-01-15,2023-04-14,8,190.43,Corso Avanzato di Arti Marziali
+ED166,2024-05-17,2024-06-30,15,232.3,Corso Base di Arti Marziali
+ED167,2023-08-29,2023-11-01,14,233.37,Corso Base di Arti Marziali
+ED168,2023-05-10,2023-07-20,12,120.21,Corso Base di Arti Marziali
+ED169,2024-09-30,2024-11-27,17,206.08,Corso Base di Arti Marziali
+ED170,2024-12-06,2025-02-09,19,98.4,Corso Base di Arti Marziali
+ED171,2023-02-12,2023-05-05,15,136.81,Corso Base di Arti Marziali
+ED172,2024-02-04,2024-05-04,15,177.06,Corso Base di Arti Marziali
+ED173,2024-04-29,2024-06-04,8,72.35,Corso Base di Arti Marziali
+ED174,2023-10-18,2024-01-11,7,51.69,Corso Base di Arti Marziali
+ED175,2023-03-30,2023-06-18,6,223.7,Corso Base di Scherma
+ED176,2023-01-16,2023-04-08,7,129.36,Corso Base di Scherma
+ED177,2024-03-08,2024-04-13,12,107.5,Corso Base di Scherma
+ED178,2023-09-01,2023-11-28,17,197.17,Corso Base di Scherma
+ED179,2023-02-22,2023-05-07,8,135.6,Corso Base di Scherma
+ED180,2023-01-26,2023-03-30,7,215.19,Corso Avanzato di Scherma
+ED181,2024-12-09,2025-02-26,18,79.58,Corso Avanzato di Scherma
+ED182,2023-08-24,2023-10-20,18,203.31,Corso Avanzato di Scherma
+ED183,2023-02-06,2023-03-20,11,94.54,Corso Avanzato di Scherma
+ED184,2024-05-24,2024-07-25,6,226.69,Corso Avanzato di Scherma
+ED185,2023-10-18,2023-11-23,16,184.79,Corso Intermedio di Arrampicata
+ED186,2023-07-02,2023-08-01,18,105.83,Corso Intermedio di Arrampicata
+ED187,2024-10-07,2024-12-21,7,243.96,Corso Intermedio di Arrampicata
+ED188,2024-12-16,2025-02-02,17,83.27,Corso Intermedio di Arrampicata
+ED189,2024-06-19,2024-09-01,19,107.16,Corso Intermedio di Arrampicata
+ED190,2023-02-10,2023-04-26,5,158.57,Corso Intermedio di Arrampicata
+ED191,2023-11-14,2023-12-31,18,135.63,Corso Intermedio di Arrampicata
+ED192,2024-06-12,2024-08-31,18,138.47,Corso Intermedio di Arrampicata
+ED193,2023-04-02,2023-05-19,7,200.98,Corso Base di Arrampicata
+ED194,2024-06-21,2024-09-10,20,56.56,Corso Base di Arrampicata
+ED195,2024-06-22,2024-09-09,6,86.69,Corso Base di Arrampicata
+ED196,2023-05-06,2023-06-12,12,216.05,Corso Base di Arrampicata
+ED197,2023-11-03,2024-01-15,14,217.25,Corso Base di Arrampicata
+ED198,2023-05-06,2023-06-17,18,62.34,Corso Base di Arrampicata
+ED199,2023-07-20,2023-09-09,6,121.06,Corso Base di Arrampicata
+ED200,2023-10-19,2023-12-01,20,172.95,Corso Intermedio di Ciclismo
+ED201,2024-02-13,2024-03-22,12,104.74,Corso Intermedio di Ciclismo
+ED202,2023-09-26,2023-11-14,17,83.62,Corso Intermedio di Ciclismo
+ED203,2023-10-26,2023-12-06,11,174.92,Corso Intermedio di Ciclismo
+ED204,2024-11-09,2024-12-25,7,165.81,Corso Intermedio di Ciclismo
+ED205,2024-10-08,2024-12-21,12,205.97,Corso Intermedio di Ciclismo
+ED206,2023-09-10,2023-10-22,12,104.13,Corso Intermedio di Ciclismo
+ED207,2024-02-29,2024-05-06,14,185.55,Corso Intermedio di Ciclismo
+ED208,2024-10-18,2024-12-15,16,208.23,Corso Intermedio di Ciclismo
+ED209,2024-05-19,2024-07-27,11,181.07,Corso Intermedio di Ciclismo
+ED210,2024-06-20,2024-08-20,9,150.09,Corso Intermedio di Ciclismo
+ED211,2024-04-10,2024-06-13,6,143.31,Corso Intermedio di Ciclismo
+ED212,2023-06-06,2023-08-07,17,181.77,Corso Avanzato di Ciclismo
+ED213,2023-11-22,2024-01-12,6,81.96,Corso Avanzato di Ciclismo
+ED214,2023-10-05,2023-12-04,17,87.41,Corso Avanzato di Ciclismo
+ED215,2024-06-13,2024-08-28,18,78.58,Corso Avanzato di Ciclismo
+ED216,2024-12-09,2025-03-09,10,108.01,Corso Avanzato di Ciclismo
+ED217,2024-04-08,2024-06-28,19,171.01,Corso Avanzato di Ciclismo
+ED218,2023-05-19,2023-07-14,16,58.38,Corso Intermedio di Rugby
+ED219,2023-12-11,2024-02-27,17,147.33,Corso Intermedio di Rugby
+ED220,2024-09-30,2024-11-18,10,104.66,Corso Intermedio di Rugby
+ED221,2024-09-09,2024-11-05,11,146.02,Corso Intermedio di Rugby
+ED222,2024-09-20,2024-11-09,9,190.88,Corso Intermedio di Rugby
+ED223,2023-07-29,2023-10-09,12,75.8,Corso Intermedio di Rugby
+ED224,2024-02-19,2024-05-07,11,231.08,Corso Intermedio di Rugby
+ED225,2023-10-22,2024-01-17,13,249.52,Corso Intermedio di Rugby
+ED226,2024-12-14,2025-02-11,16,117.68,Corso Base di Rugby
+ED227,2024-08-24,2024-09-27,15,248.26,Corso Base di Rugby
+ED228,2024-04-02,2024-05-16,5,157.62,Corso Base di Rugby
+ED229,2023-10-03,2023-12-10,16,172.33,Corso Base di Rugby
+ED230,2024-09-24,2024-12-23,20,222.17,Corso Base di Rugby
+ED231,2024-10-09,2024-12-26,17,173.48,Corso Base di Rugby
+ED232,2023-06-08,2023-07-20,17,51.0,Corso Base di Rugby
+ED233,2023-09-17,2023-11-14,16,80.42,Corso Base di Rugby
+ED234,2023-01-23,2023-02-28,10,195.45,Corso Base di Rugby
+ED235,2023-09-24,2023-11-10,8,204.27,Corso Base di Rugby
+ED236,2024-08-09,2024-10-28,15,138.44,Corso Intermedio di Rugby
+ED237,2024-04-05,2024-05-19,16,184.66,Corso Intermedio di Rugby
+ED238,2024-08-25,2024-10-26,5,59.1,Corso Intermedio di Rugby
+ED239,2024-02-13,2024-03-29,9,235.49,Corso Intermedio di Rugby
+ED240,2023-07-08,2023-08-14,9,110.49,Corso Intermedio di Rugby
+ED241,2023-01-04,2023-02-22,17,219.45,Corso Intermedio di Rugby
+ED242,2024-08-06,2024-09-17,6,200.93,Corso Intermedio di Rugby
+ED243,2023-05-18,2023-07-30,10,80.16,Corso Intermedio di Rugby
+ED244,2023-11-18,2024-02-07,20,94.25,Corso Intermedio di Rugby
+ED245,2023-03-05,2023-05-03,9,215.24,Corso Intermedio di Rugby
+ED246,2023-12-08,2024-01-24,15,123.13,Corso Base di Rugby
+ED247,2024-05-12,2024-06-11,11,56.66,Corso Base di Rugby
+ED248,2023-01-18,2023-02-21,13,51.7,Corso Base di Rugby
+ED249,2023-05-22,2023-08-17,15,54.89,Corso Base di Rugby
+ED250,2023-07-05,2023-08-19,8,113.93,Corso Base di Rugby
+ED251,2024-03-19,2024-04-25,6,191.79,Corso Base di Rugby
+ED252,2024-09-26,2024-12-17,5,71.79,Corso Avanzato di Boxe
+ED253,2023-12-06,2024-03-05,5,138.61,Corso Avanzato di Boxe
+ED254,2023-08-17,2023-10-18,10,143.47,Corso Avanzato di Boxe
+ED255,2024-11-27,2025-01-06,6,126.62,Corso Avanzato di Boxe
+ED256,2023-09-28,2023-12-04,17,176.97,Corso Avanzato di Boxe
+ED257,2024-01-23,2024-03-30,8,103.14,Corso Avanzato di Boxe
+ED258,2023-05-07,2023-07-17,13,80.77,Corso Avanzato di Boxe
+ED259,2024-03-21,2024-04-29,14,154.17,Corso Avanzato di Boxe
+ED260,2023-10-24,2024-01-04,16,50.36,Corso Base di Boxe
+ED261,2023-02-24,2023-04-24,11,178.06,Corso Base di Boxe
+ED262,2023-05-29,2023-07-27,14,67.47,Corso Base di Boxe
+ED263,2024-06-26,2024-07-27,16,145.06,Corso Base di Boxe
+ED264,2024-01-29,2024-03-28,11,134.51,Corso Base di Boxe
+ED265,2023-03-05,2023-04-10,16,87.81,Corso Base di Boxe
+ED266,2023-10-28,2024-01-05,11,186.97,Corso Base di Boxe
+ED267,2023-02-23,2023-05-10,6,209.03,Corso Base di Boxe
+ED268,2024-09-03,2024-11-30,10,165.49,Corso Base di Boxe
+ED269,2023-12-13,2024-02-05,10,178.79,Corso Base di Boxe
+ED270,2024-04-28,2024-07-06,19,107.17,Corso Base di Boxe
+ED271,2023-08-26,2023-10-20,12,50.46,Corso Base di Boxe
+ED272,2023-03-07,2023-04-21,14,119.68,Corso Base di Boxe
+ED273,2024-07-08,2024-10-04,18,200.66,Corso Base di Boxe
+ED274,2023-02-15,2023-04-22,20,176.83,Corso Base di Boxe
+ED275,2023-03-30,2023-06-24,10,208.49,Corso Base di Boxe
+ED276,2024-07-18,2024-08-21,8,171.33,Corso Intermedio di Boxe
+ED277,2023-12-28,2024-02-06,11,197.96,Corso Intermedio di Boxe
+ED278,2023-01-10,2023-03-06,11,221.79,Corso Intermedio di Boxe
+ED279,2023-03-06,2023-05-09,6,163.85,Corso Intermedio di Boxe
+ED280,2023-07-07,2023-09-11,17,143.81,Corso Intermedio di Boxe
+ED281,2024-03-23,2024-05-19,19,179.28,Corso Intermedio di Boxe
+ED282,2024-12-14,2025-03-02,16,149.65,Corso Intermedio di Boxe
+ED283,2023-08-29,2023-09-30,18,149.12,Corso Intermedio di Boxe
+ED284,2024-12-05,2025-01-04,12,213.11,Corso Intermedio di Boxe
+ED285,2024-03-20,2024-05-16,13,132.24,Corso Intermedio di Ping Pong
+ED286,2023-01-01,2023-02-23,14,51.82,Corso Intermedio di Ping Pong
+ED287,2023-11-12,2024-01-31,8,203.03,Corso Intermedio di Ping Pong
+ED288,2023-10-03,2023-12-07,9,216.74,Corso Intermedio di Ping Pong
+ED289,2024-06-13,2024-08-21,9,229.22,Corso Intermedio di Ping Pong
+ED290,2024-04-22,2024-06-20,10,211.12,Corso Intermedio di Ping Pong
+ED291,2024-11-23,2025-02-20,17,212.62,Corso Intermedio di Ping Pong
+ED292,2024-04-20,2024-06-01,13,246.73,Corso Intermedio di Ping Pong
+ED293,2023-04-22,2023-06-21,15,208.78,Corso Base di Ping Pong
+ED294,2023-03-25,2023-06-07,17,75.5,Corso Base di Ping Pong
+ED295,2024-08-25,2024-11-21,16,204.98,Corso Base di Ping Pong
+ED296,2023-11-01,2024-01-06,13,226.48,Corso Base di Ping Pong
+ED297,2023-05-31,2023-08-25,19,148.23,Corso Base di Ping Pong
+ED298,2023-05-28,2023-07-08,19,246.01,Corso Intermedio di Pattinaggio
+ED299,2023-07-31,2023-08-31,15,61.46,Corso Intermedio di Pattinaggio
+ED300,2024-03-11,2024-05-12,8,162.16,Corso Intermedio di Pattinaggio
+ED301,2024-06-16,2024-07-22,16,241.24,Corso Intermedio di Pattinaggio
+ED302,2023-05-16,2023-06-16,5,81.55,Corso Intermedio di Pattinaggio
+ED303,2024-09-12,2024-11-18,10,231.38,Corso Avanzato di Pattinaggio
+ED304,2024-08-13,2024-10-27,8,69.04,Corso Avanzato di Pattinaggio
+ED305,2024-11-03,2025-01-16,6,72.4,Corso Avanzato di Pattinaggio
+ED306,2023-10-03,2023-12-11,11,224.84,Corso Avanzato di Pattinaggio
+ED307,2024-08-02,2024-10-11,10,133.84,Corso Avanzato di Pattinaggio
+ED308,2023-11-05,2024-01-29,8,193.98,Corso Avanzato di Pattinaggio
+ED309,2023-06-02,2023-08-01,11,247.83,Corso Avanzato di Pattinaggio
+ED310,2024-07-25,2024-09-16,5,109.81,Corso Avanzato di Pattinaggio
+ED311,2024-05-02,2024-07-19,10,119.6,Corso Avanzato di Pattinaggio
+ED312,2024-09-25,2024-11-30,17,203.07,Corso Intermedio di Pattinaggio
+ED313,2023-01-24,2023-04-17,18,131.71,Corso Intermedio di Pattinaggio
+ED314,2024-08-07,2024-09-08,11,90.68,Corso Intermedio di Pattinaggio
+ED315,2023-04-09,2023-05-17,19,224.53,Corso Intermedio di Pattinaggio
+ED316,2023-09-07,2023-10-21,13,225.39,Corso Intermedio di Pattinaggio
+ED317,2023-05-05,2023-06-09,13,215.42,Corso Intermedio di Pattinaggio
+ED318,2023-04-27,2023-07-11,13,207.57,Corso Avanzato di Palestra
+ED319,2023-10-07,2023-12-28,18,108.01,Corso Avanzato di Palestra
+ED320,2024-11-16,2025-01-02,15,201.07,Corso Avanzato di Palestra
+ED321,2023-08-18,2023-11-15,7,245.64,Corso Avanzato di Palestra
+ED322,2024-07-14,2024-10-05,16,144.11,Corso Avanzato di Palestra
+ED323,2024-02-15,2024-04-03,8,121.34,Corso Avanzato di Palestra
+ED324,2024-05-04,2024-06-24,18,224.74,Corso Avanzato di Palestra
+ED325,2023-06-22,2023-08-10,8,111.9,Corso Avanzato di Palestra
+ED326,2024-11-03,2024-12-28,6,151.95,Corso Intermedio di Palestra
+ED327,2024-09-11,2024-10-29,13,54.54,Corso Intermedio di Palestra
+ED328,2024-04-25,2024-06-30,15,95.76,Corso Intermedio di Palestra
+ED329,2023-06-04,2023-07-13,6,152.03,Corso Intermedio di Palestra
+ED330,2023-07-12,2023-09-06,20,230.96,Corso Intermedio di Palestra
+ED331,2024-09-29,2024-11-12,8,95.68,Corso Base di Palestra
+ED332,2024-02-16,2024-04-16,7,230.77,Corso Base di Palestra
+ED333,2024-07-14,2024-10-03,8,76.34,Corso Base di Palestra
+ED334,2023-03-18,2023-05-27,12,172.04,Corso Base di Palestra
+ED335,2024-09-03,2024-10-18,10,215.95,Corso Base di Palestra
+ED336,2024-01-05,2024-03-20,18,149.7,Corso Base di Palestra
+ED337,2024-02-19,2024-04-22,13,105.72,Corso Base di Palestra
+ED338,2023-07-27,2023-09-06,15,52.15,Corso Base di Palestra
+ED339,2023-05-20,2023-07-17,14,248.65,Corso Base di Palestra
+ED340,2023-08-21,2023-10-19,20,118.46,Corso Base di Palestra
+ED341,2023-03-07,2023-05-12,20,137.49,Corso Base di Palestra
+ED342,2023-04-01,2023-05-09,17,166.45,Corso Base di Palestra
+ED343,2024-07-02,2024-09-23,9,216.58,Corso Base di Palestra
+ED344,2024-08-08,2024-11-06,11,103.75,Corso Base di Palestra
+ED345,2023-03-26,2023-05-26,10,223.55,Corso Base di Palestra
+ED346,2023-11-04,2024-01-10,5,102.89,Corso Base di Palestra
+ED347,2024-03-28,2024-05-10,9,148.29,Corso Base di Palestra
+ED348,2023-01-24,2023-03-02,6,227.92,Corso Base di Palestra
