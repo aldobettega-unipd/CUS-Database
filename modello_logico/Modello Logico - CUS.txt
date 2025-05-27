@@ -5,7 +5,7 @@ PERSONA (codice_fiscale, nome, cognome, eta, sesso, universita)
         universita → UNIVERSITA.nome
 
 
-IMPIANTO SPORTIVO (via, citta, n_campi,, contatto_segreteria, gestione)
+IMPIANTO SPORTIVO (via, citta, n_campi, contatto_segreteria, gestione)
         getione → UNIVERSITA.nome
 
 

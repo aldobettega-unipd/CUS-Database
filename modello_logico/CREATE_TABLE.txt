@@ -1,0 +1,179 @@
+﻿CREATE TABLE UNIVERSITA (
+    citta VARCHAR(100) NOT NULL,
+    nome VARCHAR(100) PRIMARY KEY
+);
+
+
+CREATE TABLE PERSONA (
+    codice_fiscale VARCHAR(16) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cognome VARCHAR(100) NOT NULL,
+    eta INT NOT NULL,
+    sesso VARCHAR(1) NOT NULL CHECK (sesso IN ('M', 'F')),
+    universita VARCHAR(100),
+    FOREIGN KEY (universita) REFERENCES UNIVERSITA(nome)
+);
+
+
+CREATE TABLE IMPIANTO_SPORTIVO (
+    via VARCHAR(100),
+    citta VARCHAR(100),
+    n_campi INT NOT NULL CHECK (n_campi > 0),
+    contatto_segreteria VARCHAR(14) NOT NULL,
+    gestione VARCHAR(100) NOT NULL,
+    PRIMARY KEY (via, citta),
+    FOREIGN KEY (gestione) REFERENCES UNIVERSITA(nome)
+);
+
+
+CREATE TABLE CAMPO (
+    codice TEXT PRIMARY KEY,
+    prenotabile BOOL NOT NULL,
+    responsabile VARCHAR(16) NOT NULL,
+    via VARCHAR(100) NOT NULL,
+    citta VARCHAR(100) NOT NULL,
+    FOREIGN KEY (via, citta) REFERENCES IMPIANTO_SPORTIVO(via, citta),
+    FOREIGN KEY (responsabile) REFERENCES PERSONA(codice_fiscale)
+);
+
+
+
+
+CREATE TABLE ORARIO_IMPIANTO (
+    via VARCHAR(100) NOT NULL,
+    citta VARCHAR(100) NOT NULL,
+    giorno_settimana VARCHAR(10) NOT NULL CHECK (
+        giorno_settimana IN ('Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica')
+    ),
+    apertura TIME NOT NULL,
+    chiusura TIME NOT NULL,
+    PRIMARY KEY (via, citta, giorno_settimana),
+    FOREIGN KEY (via, citta) REFERENCES IMPIANTO_SPORTIVO(via, citta)
+);
+
+
+
+
+CREATE TABLE SPORT (
+    nome_sport VARCHAR(100) PRIMARY KEY,
+    numero_attivita INT NOT NULL CHECK (numero_attivita >= 0)
+);
+
+
+CREATE TABLE ATTIVITA (
+    codice_attivita TEXT PRIMARY KEY,
+    costo DECIMAL(10,2) NOT NULL CHECK (costo >= 0),
+    sport VARCHAR(100) NOT NULL,
+    FOREIGN KEY (sport) REFERENCES SPORT(nome_sport)
+);
+
+
+CREATE TABLE CORSO (
+    codice_corso TEXT PRIMARY KEY,
+    categoria VARCHAR(100),
+    sesso VARCHAR(1) NOT NULL CHECK (sesso IN ('M', 'F', 'U')),
+    FOREIGN KEY (codice_corso) REFERENCES ATTIVITA(codice_attivita)
+);
+
+
+CREATE TABLE EDIZIONE_CORSO (
+    codice TEXT PRIMARY KEY,
+    data_inizio DATE NOT NULL,
+    data_fine DATE NOT NULL,
+    n_partecipanti INT NOT NULL CHECK (n_partecipanti > 0),
+    costo DECIMAL(10,2) NOT NULL CHECK (costo >= 0),
+    corso TEXT NOT NULL,
+    FOREIGN KEY (corso) REFERENCES CORSO(codice_corso),
+    CHECK (data_inizio < data_fine)
+);
+
+
+CREATE TABLE LEZIONE (
+    orario TIME NOT NULL,
+    giorno_settimana VARCHAR(10) NOT NULL CHECK (
+        giorno_settimana IN ('Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica')
+    ),
+    campo TEXT NOT NULL,
+    edizione_corso TEXT NOT NULL,
+    PRIMARY KEY (orario, giorno, campo),
+    FOREIGN KEY (campo) REFERENCES CAMPO(codice),
+    FOREIGN KEY (edizione_corso) REFERENCES EDIZIONE_CORSO(codice)
+);
+
+
+
+
+
+
+
+
+CREATE TABLE ABBONAMENTO (
+    codice_abbonamento TEXT PRIMARY KEY,
+    FOREIGN KEY (codice_abbonamento) REFERENCES ATTIVITA(codice_attivita)
+);
+
+
+
+
+CREATE TABLE ACCESSI_LIMITATI (
+    codice_abbonamento TEXT PRIMARY KEY,
+    n_accessi INT NOT NULL CHECK (n_accessi > 0),
+    FOREIGN KEY (codice_abbonamento) REFERENCES ATTIVITA(codice_attivita)
+);
+
+
+CREATE TABLE PERIODICO (
+    codice_abbonamento TEXT PRIMARY KEY,
+    periodo VARCHAR(50) NOT NULL,
+    FOREIGN KEY (codice_abbonamento) REFERENCES ATTIVITA(codice_attivita)
+);
+
+
+CREATE TABLE AFFITTO (
+    persona VARCHAR(16) NOT NULL,
+    campo TEXT NOT NULL,
+    ora_inizio TIMESTAMP NOT NULL,
+    ora_fine TIMESTAMP NOT NULL,
+    tariffa DECIMAL(10,2) NOT NULL CHECK (tariffa >= 0),
+    PRIMARY KEY (persona, campo, ora_inizio),
+    FOREIGN KEY (persona) REFERENCES PERSONA(codice_fiscale),
+    FOREIGN KEY (campo) REFERENCES CAMPO(codice),
+    CHECK (ora_inizio < ora_fine)
+);
+
+
+CREATE TABLE DOCENZA (
+    istruttore VARCHAR(16) NOT NULL,
+    corso INT NOT NULL,
+    PRIMARY KEY (istruttore, corso),
+    FOREIGN KEY (istruttore) REFERENCES PERSONA(codice_fiscale),
+    FOREIGN KEY (corso) REFERENCES CORSO(codice_corso)
+);
+
+
+CREATE TABLE ISCRIZIONE (
+    studente VARCHAR(16) NOT NULL,
+    codice_attivita INT NOT NULL,
+    data DATE NOT NULL,
+    PRIMARY KEY (studente, codice_attivita),
+    FOREIGN KEY (studente) REFERENCES PERSONA(codice_fiscale),
+    FOREIGN KEY (codice_attivita) REFERENCES ATTIVITA(codice_attivita)
+);
+
+
+CREATE TABLE ACCESSO (
+    campo INT NOT NULL,
+    abbonamento INT NOT NULL,
+    PRIMARY KEY (campo, abbonamento),
+    FOREIGN KEY (campo) REFERENCES CAMPO(codice),
+    FOREIGN KEY (abbonamento) REFERENCES ABBONAMENTO(codice_abbonamento)
+);
+
+
+CREATE TABLE COMPATIBILITA (
+    campo INT NOT NULL,
+    sport VARCHAR(100) NOT NULL,
+    PRIMARY KEY (campo, sport),
+    FOREIGN KEY (campo) REFERENCES CAMPO(codice),
+    FOREIGN KEY (sport) REFERENCES SPORT(nome_sport)
+);
