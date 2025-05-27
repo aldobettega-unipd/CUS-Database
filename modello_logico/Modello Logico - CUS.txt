@@ -1,9 +1,6 @@
 ﻿UNIVERSITA (nome, citta)
 
 
-SPORT(codice, nome)
-
-
 PERSONA (codice_fiscale, nome, cognome, eta, sesso, universita)
         universita → UNIVERSITA.nome
 
@@ -16,28 +13,31 @@ ORARIO_IMPIANTO(impianto, giorno_settimana, apertura, chiusura)
         impianto → IMPIANTO_SPORTIVO.(via, città)
 
 
-CAMPO (codice, prenotabile, orari, responsabile, via, citta)
+CAMPO (codice, prenotabile, responsabile, via, citta)
         responsabile → PERSONA.codice_fiscale
         via, citta → IMPIANTO_SPORTIVO.(via, citta)
 
 
-ABBONAMENTO (sport, nome)
-        sport → SPORT.codice
+SPORT (nome_sport, numero_attività)
 
 
-ACCESSI_LIMITATI (abbonamento, nome, n_accessi)
-        sport → ABBONAMENTO.codice
+ATTIVITA (codice_attivita, costo, sport)
+        sport → SPORT.nome_sport
 
 
-PERIODICO (abbonamento, nome, periodo)
-        sport → ABBONAMENTO.codice
+ACCESSI_LIMITATI (codice_abbonamento, n_accessi)
+        codice_abbonamento →ATTIVITA.codice
 
 
-CORSO (sport, nome?, categoria, sesso)
-        sport → SPORT.codice
+PERIODICO (codice_abbonamento, periodo)
+        codice_abbonamento →ATTIVITA.codice_attivita
 
 
-EDIZIONE_CORSO (codice, data_inizio, data_fine, n_partecipanti, costo, corso)
+CORSO (codice_corso, categoria, sesso)
+        codice_corso →ATTIVITA.codice_attivita
+
+
+EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, costo, corso)
         corso → CORSO.codice
 
 
@@ -47,13 +47,13 @@ LEZIONE (orario, giorno, campo, edizione_corso)
 
 
 DOCENZA (istruttore, corso)
-        istruttore → PERSONA.cf        
+        istruttore → PERSONA.codice_fiscale
         corso → CORSO.codice
 
 
-ISCRIZIONE (studente, sport, data, costo)
+ISCRIZIONE (studente, codice_attivita, data)
         studente → PERSONA.codice_fiscale
-        sport → SPORT.codice
+        codice_attivita →ATTIVITA.codice_attivita
 
 
 AFFITTO(persona, campo, ora_inizio, ora fine, tariffa )
@@ -63,19 +63,9 @@ AFFITTO(persona, campo, ora_inizio, ora fine, tariffa )
 
 ACCESSO (campo, abbonamento)
         campo → CAMPO.codice
-        abbonamento → ABBONAMENTO.sport
+        abbonamento → ATTIVITA.codice_attivita
 
 
-
-
-
-
-
-
-Problema orari: orari campo e orari impianto
-
-
-Idea: aggiungere relazione “tipo” su campo per dire quale sport si può fare su di esso
-
-
-SPort: racchiude tutti i corsi e abbonamenti? (calcio 1,2,3 + palestra trimestrale, 10 accessi) oppure solo (calcio + palestra) ?
+COMPATIBILITA (campo, sport)
+        campo → CAMPO.codice
+        sport → SPORT.nome_sport
