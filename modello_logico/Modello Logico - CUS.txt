@@ -1,0 +1,81 @@
+﻿UNIVERSITA (nome, citta)
+
+
+SPORT(codice, nome)
+
+
+PERSONA (codice_fiscale, nome, cognome, eta, sesso, universita)
+        universita → UNIVERSITA.nome
+
+
+IMPIANTO SPORTIVO (via, citta, n_campi,, contatto_segreteria, gestione)
+        getione → UNIVERSITA.nome
+
+
+ORARIO_IMPIANTO(impianto, giorno_settimana, apertura, chiusura)
+        impianto → IMPIANTO_SPORTIVO.(via, città)
+
+
+CAMPO (codice, prenotabile, orari, responsabile, via, citta)
+        responsabile → PERSONA.codice_fiscale
+        via, citta → IMPIANTO_SPORTIVO.(via, citta)
+
+
+ABBONAMENTO (sport, nome)
+        sport → SPORT.codice
+
+
+ACCESSI_LIMITATI (abbonamento, nome, n_accessi)
+        sport → ABBONAMENTO.codice
+
+
+PERIODICO (abbonamento, nome, periodo)
+        sport → ABBONAMENTO.codice
+
+
+CORSO (sport, nome?, categoria, sesso)
+        sport → SPORT.codice
+
+
+EDIZIONE_CORSO (codice, data_inizio, data_fine, n_partecipanti, costo, corso)
+        corso → CORSO.codice
+
+
+LEZIONE (orario, giorno, campo, edizione_corso)
+        campo → CAMPO.codice
+        edizione_corso → EDIZIONE_CORSO.codice
+
+
+DOCENZA (istruttore, corso)
+        istruttore → PERSONA.cf        
+        corso → CORSO.codice
+
+
+ISCRIZIONE (studente, sport, data, costo)
+        studente → PERSONA.codice_fiscale
+        sport → SPORT.codice
+
+
+AFFITTO(persona, campo, ora_inizio, ora fine, tariffa )
+        persona → PERSONA.codice_fiscale
+        campo → CAMPO.codice
+
+
+ACCESSO (campo, abbonamento)
+        campo → CAMPO.codice
+        abbonamento → ABBONAMENTO.sport
+
+
+
+
+
+
+
+
+Problema orari: orari campo e orari impianto
+
+
+Idea: aggiungere relazione “tipo” su campo per dire quale sport si può fare su di esso
+
+
+SPort: racchiude tutti i corsi e abbonamenti? (calcio 1,2,3 + palestra trimestrale, 10 accessi) oppure solo (calcio + palestra) ?
