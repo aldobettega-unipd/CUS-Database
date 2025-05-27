@@ -38,7 +38,8 @@ righe = []
 for via, citta in impianti:
     for giorno in giorni_settimana:
         righe.append({
-            "impianto": f"{via}, {citta}",
+            "via": via,
+            "citta": citta,
             "giorno_settimana": giorno,
             "apertura": orari_apertura[giorno],
             "chiusura": orari_chiusura[giorno]
@@ -46,7 +47,7 @@ for via, citta in impianti:
 
 # Scrive il file CSV
 with open("ORARIO_IMPIANTO.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["impianto", "giorno_settimana", "apertura", "chiusura"])
+    writer = csv.DictWriter(f, fieldnames=["via", "citta", "giorno_settimana", "apertura", "chiusura"])
     writer.writeheader()
     for riga in righe:
         writer.writerow(riga)

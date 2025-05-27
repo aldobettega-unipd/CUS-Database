@@ -32,5 +32,5 @@ universita = carica_universita("UNIVERSITA.csv")
 with open("IMPIANTO_SPORTIVO.csv", "w", newline='', encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames=["via", "citta", "n_campi", "contatto_segreteria", "gestione"])
     writer.writeheader()
-    for _ in range(20):  # Genera 20 impianti sportivi
+    for _ in range(10):  # Genera 20 impianti sportivi
         writer.writerow(genera_impianto(universita))

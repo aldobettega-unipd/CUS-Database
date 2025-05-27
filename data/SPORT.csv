@@ -1,22 +1,21 @@
-codice,nome
-SP001,Calcio
-SP002,Basket
-SP003,Pallavolo
-SP004,Nuoto
-SP005,Tennis
-SP006,Atletica
-SP007,Yoga
-SP008,Arti Marziali
-SP009,Scherma
-SP010,Arrampicata
-SP011,Rugby
-SP012,Boxe
-SP013,Ping Pong
-SP014,Pattinaggio
-SP015,Atletica Leggera
-SP016,Hockey su prato
-SP017,Judo
-SP018,Rugby
-SP019,Ultimate Frisbee
-SP020,Palestra
-SP021,Calisthenics  
+nome_sport
+Calcio
+Basket
+Pallavolo
+Nuoto
+Tennis
+Atletica
+Yoga
+Arti Marziali
+Scherma
+Arrampicata
+Rugby
+Boxe
+Ping Pong
+Pattinaggio
+Atletica Leggera
+Hockey su prato
+Judo
+Ultimate Frisbee
+Palestra
+Calisthenics

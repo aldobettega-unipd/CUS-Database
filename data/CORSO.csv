@@ -1,49 +1,108 @@
-sport,nome,categoria,sesso
-SP001,Corso Avanzato di Calcio,Avanzato,U
-SP001,Corso Intermedio di Calcio,Intermedio,U
-SP001,Corso Intermedio di Calcio,Intermedio,F
-SP002,Corso Avanzato di Basket,Avanzato,M
-SP002,Corso Base di Basket,Base,M
-SP002,Corso Base di Basket,Base,F
-SP002,Corso Intermedio di Basket,Intermedio,U
-SP003,Corso Avanzato di Pallavolo,Avanzato,F
-SP003,Corso Base di Pallavolo,Base,F
-SP003,Corso Avanzato di Pallavolo,Avanzato,M
-SP004,Corso Base di Nuoto,Base,F
-SP004,Corso Avanzato di Nuoto,Avanzato,U
-SP004,Corso Avanzato di Nuoto,Avanzato,F
-SP005,Corso Intermedio di Tennis,Intermedio,F
-SP005,Corso Avanzato di Tennis,Avanzato,U
-SP006,Corso Avanzato di Atletica,Avanzato,U
-SP006,Corso Avanzato di Atletica,Avanzato,U
-SP006,Corso Base di Atletica,Base,U
-SP007,Corso Avanzato di Yoga,Avanzato,U
-SP007,Corso Avanzato di Yoga,Avanzato,M
-SP007,Corso Base di Yoga,Base,M
-SP008,Corso Intermedio di Arti Marziali,Intermedio,M
-SP008,Corso Avanzato di Arti Marziali,Avanzato,M
-SP008,Corso Base di Arti Marziali,Base,F
-SP009,Corso Base di Scherma,Base,U
-SP009,Corso Avanzato di Scherma,Avanzato,U
-SP010,Corso Intermedio di Arrampicata,Intermedio,F
-SP010,Corso Base di Arrampicata,Base,F
-SP011,Corso Intermedio di Ciclismo,Intermedio,M
-SP011,Corso Intermedio di Ciclismo,Intermedio,F
-SP011,Corso Avanzato di Ciclismo,Avanzato,M
-SP012,Corso Intermedio di Rugby,Intermedio,M
-SP012,Corso Base di Rugby,Base,F
-SP012,Corso Intermedio di Rugby,Intermedio,M
-SP012,Corso Base di Rugby,Base,F
-SP013,Corso Avanzato di Boxe,Avanzato,U
-SP013,Corso Base di Boxe,Base,M
-SP013,Corso Base di Boxe,Base,F
-SP013,Corso Intermedio di Boxe,Intermedio,F
-SP014,Corso Intermedio di Ping Pong,Intermedio,F
-SP014,Corso Base di Ping Pong,Base,F
-SP015,Corso Intermedio di Pattinaggio,Intermedio,F
-SP015,Corso Avanzato di Pattinaggio,Avanzato,F
-SP015,Corso Intermedio di Pattinaggio,Intermedio,F
-SP016,Corso Avanzato di Palestra,Avanzato,M
-SP016,Corso Intermedio di Palestra,Intermedio,F
-SP016,Corso Base di Palestra,Base,M
-SP016,Corso Base di Palestra,Base,U
+codice_attivita,categoria,sesso
+AT001,Juniores,M
+AT002,Juniores,U
+AT003,Allievi,M
+AT004,Allievi,U
+AT005,Prima squadra,M
+AT006,Prima squadra,U
+AT007,Under 18,F
+AT008,Under 18,M
+AT009,Under 21,F
+AT010,Under 21,M
+AT011,Senior,F
+AT012,Senior,M
+AT013,Under 16,F
+AT014,Under 16,M
+AT015,Under 16,U
+AT016,Under 18,F
+AT017,Under 18,M
+AT018,Under 18,U
+AT019,Senior,F
+AT020,Senior,M
+AT021,Senior,U
+AT022,Base,U
+AT023,Agonisti,U
+AT024,Master,U
+AT025,Under 12,M
+AT026,Under 12,F
+AT027,Under 18,M
+AT028,Under 18,F
+AT029,Senior,M
+AT030,Senior,F
+AT031,Esordienti,U
+AT032,Cadetti,U
+AT033,Professionisti,U
+AT034,Principianti,U
+AT035,Intermedio,U
+AT036,Avanzato,U
+AT037,Cinture Bianche,M
+AT038,Cinture Bianche,F
+AT039,Cinture Bianche,U
+AT040,Cinture Colorate,M
+AT041,Cinture Colorate,F
+AT042,Cinture Colorate,U
+AT043,Cinture Nere,M
+AT044,Cinture Nere,F
+AT045,Cinture Nere,U
+AT046,Under 14,M
+AT047,Under 14,F
+AT048,Under 17,M
+AT049,Under 17,F
+AT050,Senior,M
+AT051,Senior,F
+AT052,Indoor Base,U
+AT053,Indoor Avanzato,U
+AT054,Outdoor Tecnico,U
+AT055,Under 16,M
+AT056,Under 16,F
+AT057,Under 20,M
+AT058,Under 20,F
+AT059,Prima squadra,M
+AT060,Prima squadra,F
+AT061,Amatori,M
+AT062,Agonisti,M
+AT063,Pro,M
+AT064,Base,U
+AT065,Club,U
+AT066,Torneo,U
+AT067,Artistico,F
+AT068,Artistico,U
+AT069,Velocità,F
+AT070,Velocità,U
+AT071,Agonistico,F
+AT072,Agonistico,U
+AT073,Giovanile,M
+AT074,Giovanile,F
+AT075,Giovanile,U
+AT076,Promesse,M
+AT077,Promesse,F
+AT078,Promesse,U
+AT079,Elite,M
+AT080,Elite,F
+AT081,Elite,U
+AT082,Under 14,M
+AT083,Under 14,F
+AT084,Under 16,M
+AT085,Under 16,F
+AT086,Under 18,M
+AT087,Under 18,F
+AT088,Prima Squadra,M
+AT089,Prima Squadra,F
+AT090,Kyu,M
+AT091,Kyu,F
+AT092,Kyu,U
+AT093,Dan,M
+AT094,Dan,F
+AT095,Dan,U
+AT096,Cadetti,M
+AT097,Cadetti,F
+AT098,Cadetti,U
+AT099,Recreational,U
+AT100,Competitivo,U
+AT101,Elite,U
+AT102,Sala Pesi,U
+AT103,Cardio,U
+AT104,Circuito Funzionale,U
+AT105,Base,U
+AT106,Intermedio,U
+AT107,Avanzato,U

@@ -2,46 +2,51 @@ import csv
 import random
 from datetime import datetime, timedelta
 
-# Carica tutti i nomi dei corsi da CORSO.csv
-def carica_corsi(path):
-    with open(path, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        return [row["nome"] for row in reader]
+# Carica tutti i corsi (quindi solo attività didattiche)
+with open("CORSO.csv", newline='', encoding="utf-8") as f:
+    corsi = list(csv.DictReader(f))
 
-# Genera date casuali coerenti
-def date_casuali():
+# Carica i costi delle attività
+costi_attivita = {}
+with open("ATTIVITA.csv", newline='', encoding="utf-8") as f:
+    for row in csv.DictReader(f):
+        costi_attivita[row["codice_attivita"]] = float(row["costo"])
+
+# Funzione per generare data d'inizio casuale
+def genera_data_inizio():
     start = datetime.strptime("2023-01-01", "%Y-%m-%d")
-    end = datetime.strptime("2024-12-31", "%Y-%m-%d")
-    data_inizio = start + timedelta(days=random.randint(0, (end - start).days))
-    durata_giorni = random.randint(30, 90)  # da 1 a 3 mesi
-    data_fine = data_inizio + timedelta(days=durata_giorni)
-    return data_inizio.date(), data_fine.date()
+    end = datetime.strptime("2025-12-31", "%Y-%m-%d")
+    delta = random.randint(0, (end - start).days)
+    return start + timedelta(days=delta)
 
-# Genera edizioni
-def genera_edizioni(corsi):
-    edizioni = []
-    ed_id = 1
-    for corso in corsi:
-        n_edizioni = random.randint(5, 10)
-        for _ in range(n_edizioni):
-            data_inizio, data_fine = date_casuali()
-            edizioni.append({
-                "codice": f"ED{ed_id:03}",
-                "data_inizio": data_inizio,
-                "data_fine": data_fine,
-                "n_partecipanti": random.randint(5, 20),
-                "costo": round(random.uniform(50, 250), 2),
-                "corso": corso
-            })
-            ed_id += 1
-    return edizioni
+# Generazione delle edizioni
+edizioni = []
+ed_id = 1
 
-# MAIN
-corsi = carica_corsi("CORSO.csv")
-edizioni = genera_edizioni(corsi)
+for corso in corsi:
+    codice_attivita = corso["codice_attivita"]
+    costo_base = costi_attivita.get(codice_attivita, 100.0)
 
-with open("EDIZIONE_CORSO.csv", "w", newline='', encoding='utf-8') as f:
-    writer = csv.DictWriter(f, fieldnames=["codice", "data_inizio", "data_fine", "n_partecipanti", "costo", "corso"])
+    for _ in range(5):
+        data_inizio = genera_data_inizio()
+        durata = random.randint(30, 90)
+        data_fine = data_inizio + timedelta(days=durata)
+
+        edizioni.append({
+            "codice_edizione": f"ED{ed_id:03}",
+            "data_inizio": data_inizio.strftime("%Y-%m-%d"),
+            "data_fine": data_fine.strftime("%Y-%m-%d"),
+            "n_partecipanti": random.randint(5, 20),
+            "costo": round(costo_base + random.uniform(-10, 20), 2),
+            "codice_attivita": codice_attivita
+        })
+
+        ed_id += 1
+
+# Scrittura EDIZIONE_CORSO.csv
+with open("EDIZIONE_CORSO.csv", "w", newline='', encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=[
+        "codice_edizione", "data_inizio", "data_fine", "n_partecipanti", "costo", "codice_attivita"
+    ])
     writer.writeheader()
-    for ed in edizioni:
-        writer.writerow(ed)
+    writer.writerows(edizioni)
