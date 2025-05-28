@@ -2,45 +2,46 @@ import csv
 import random
 from datetime import datetime, timedelta
 
-def carica_studenti(path):
+def carica_persone(path):
     with open(path, newline='', encoding='utf-8') as f:
         return [row["codice_fiscale"] for row in csv.DictReader(f)]
 
-def carica_sport(path):
+def carica_attivita(path):
     with open(path, newline='', encoding='utf-8') as f:
-        return [row["codice"] for row in csv.DictReader(f)]
+        return [row["codice_attivita"] for row in csv.DictReader(f)]
 
-def data_iscrizione():
-    oggi = datetime.today()
-    inizio = oggi - timedelta(days=365*2)  # ultimi 2 anni
-    delta = oggi - inizio
-    random_days = random.randint(0, delta.days)
-    return (inizio + timedelta(days=random_days)).date()
+def genera_data_iscrizione():
+    oggi = datetime.now()
+    giorni_fa = random.randint(0, 365 * 3)  # negli ultimi 3 anni
+    data = oggi - timedelta(days=giorni_fa)
+    return data.strftime("%Y-%m-%d")
 
-def genera_iscrizioni(studenti, sport_list):
-    iscrizioni = []
-    for studente in studenti:
-        # Ogni studente ha probabilità di 70% di avere almeno 1 iscrizione
-        if random.random() < 0.7:
-            n_sport = random.randint(1, 3)  # da 1 a 3 iscrizioni
-            sport_scelti = random.sample(sport_list, n_sport)
-            for sport in sport_scelti:
-                iscrizioni.append({
-                    "studente": studente,
-                    "sport": sport,
-                    "data": data_iscrizione(),
-                    "costo": round(random.uniform(50, 300), 2)
-                })
-    return iscrizioni
+def genera_iscrizioni(persone, attivita, max_iscrizioni=500):
+    iscrizioni = set()
+    tentativi = 0
+    while len(iscrizioni) < max_iscrizioni and tentativi < max_iscrizioni * 10:
+        persona = random.choice(persone)
+        attivita_scelta = random.choice(attivita)
+        chiave = (persona, attivita_scelta)
+        if chiave not in iscrizioni:
+            iscrizioni.add(chiave)
+        tentativi += 1
+    return [
+        {
+            "studente": studente,
+            "codice_attivita": attivita,
+            "data": genera_data_iscrizione()
+        }
+        for studente, attivita in iscrizioni
+    ]
 
 def main():
-    studenti = carica_studenti("PERSONA.csv")
-    sport_list = carica_sport("SPORT.csv")
-
-    iscrizioni = genera_iscrizioni(studenti, sport_list)
+    persone = carica_persone("PERSONA.csv")
+    attivita = carica_attivita("ATTIVITA.csv")
+    iscrizioni = genera_iscrizioni(persone, attivita)
 
     with open("ISCRIZIONE.csv", "w", newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=["studente", "sport", "data", "costo"])
+        writer = csv.DictWriter(f, fieldnames=["studente", "codice_attivita", "data"])
         writer.writeheader()
         for i in iscrizioni:
             writer.writerow(i)
