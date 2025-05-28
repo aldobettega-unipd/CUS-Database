@@ -132,8 +132,8 @@ CREATE TABLE PERIODICO (
 CREATE TABLE AFFITTO (
     persona VARCHAR(16) NOT NULL,
     campo TEXT NOT NULL,
-    ora_inizio TIMESTAMP NOT NULL,
-    ora_fine TIMESTAMP NOT NULL,
+    ora_inizio TIME NOT NULL,
+    ora_fine TIME NOT NULL,
     tariffa DECIMAL(10,2) NOT NULL CHECK (tariffa >= 0),
     PRIMARY KEY (persona, campo, ora_inizio),
     FOREIGN KEY (persona) REFERENCES PERSONA(codice_fiscale),
@@ -142,9 +142,11 @@ CREATE TABLE AFFITTO (
 );
 
 
+
+
 CREATE TABLE DOCENZA (
     istruttore VARCHAR(16) NOT NULL,
-    corso INT NOT NULL,
+    corso TEXT NOT NULL,
     PRIMARY KEY (istruttore, corso),
     FOREIGN KEY (istruttore) REFERENCES PERSONA(codice_fiscale),
     FOREIGN KEY (corso) REFERENCES CORSO(codice_corso)
@@ -153,17 +155,17 @@ CREATE TABLE DOCENZA (
 
 CREATE TABLE ISCRIZIONE (
     studente VARCHAR(16) NOT NULL,
-    codice_attivita INT NOT NULL,
+    codice_attivita TEXT NOT NULL,
     data DATE NOT NULL,
-    PRIMARY KEY (studente, codice_attivita),
+    PRIMARY KEY (studente, codice_attivita, data),
     FOREIGN KEY (studente) REFERENCES PERSONA(codice_fiscale),
     FOREIGN KEY (codice_attivita) REFERENCES ATTIVITA(codice_attivita)
 );
 
 
 CREATE TABLE ACCESSO (
-    campo INT NOT NULL,
-    abbonamento INT NOT NULL,
+    campo TEXT NOT NULL,
+    abbonamento TEXT NOT NULL,
     PRIMARY KEY (campo, abbonamento),
     FOREIGN KEY (campo) REFERENCES CAMPO(codice),
     FOREIGN KEY (abbonamento) REFERENCES ABBONAMENTO(codice_abbonamento)
@@ -171,7 +173,7 @@ CREATE TABLE ACCESSO (
 
 
 CREATE TABLE COMPATIBILITA (
-    campo INT NOT NULL,
+    campo TEXT NOT NULL,
     sport VARCHAR(100) NOT NULL,
     PRIMARY KEY (campo, sport),
     FOREIGN KEY (campo) REFERENCES CAMPO(codice),
