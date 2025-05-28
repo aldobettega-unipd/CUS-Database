@@ -1,50 +1,94 @@
 import csv
 import random
-from datetime import datetime, timedelta
+from collections import defaultdict
 
-def carica_persone(path):
-    with open(path, newline='', encoding='utf-8') as f:
-        return [row["codice_fiscale"] for row in csv.DictReader(f)]
+# Mappa categorie -> range età
+categorie_eta = {
+    "Under 12": (6, 12),
+    "Under 14": (8, 14),
+    "Under 16": (10, 16),
+    "Under 18": (12, 18),
+    "Under 21": (14, 21),
+    "Juniores": (14, 17),
+    "Allievi": (16, 18),
+    "Senior": (18, 40),
+    "Professionisti": (20, 50),
+    "Cadetti": (12, 18),
+    "Esordienti": (8, 12),
+    "Base": (10, 60),
+    "Agonisti": (14, 35),
+    "Master": (30, 60),
+    "Kyu": (10, 15),
+    "Dan": (16, 60),
+    "Cinture Bianche": (8, 14),
+    "Cinture Colorate": (12, 16),
+    "Cinture Nere": (16, 50),
+    "Prima squadra": (18, 40),
+    "Promesse": (18, 22),
+    "Elite": (20, 35),
+    "Amatori": (14, 99),
+    "Pro": (18, 35),
+    "default": (10, 99)
+}
 
-def carica_attivita(path):
-    with open(path, newline='', encoding='utf-8') as f:
-        return [row["codice_attivita"] for row in csv.DictReader(f)]
+# 1. Carica PERSONA.csv
+with open("PERSONA.csv", newline='', encoding="utf-8") as f:
+    persone = list(csv.DictReader(f))
 
-def genera_data_iscrizione():
-    oggi = datetime.now()
-    giorni_fa = random.randint(0, 365 * 3)  # negli ultimi 3 anni
-    data = oggi - timedelta(days=giorni_fa)
-    return data.strftime("%Y-%m-%d")
+# 2. Carica CORSO.csv
+corsi = {}
+with open("CORSO.csv", newline='', encoding="utf-8") as f:
+    for row in csv.DictReader(f):
+        corsi[row["codice_attivita"]] = row
 
-def genera_iscrizioni(persone, attivita, max_iscrizioni=500):
-    iscrizioni = set()
-    tentativi = 0
-    while len(iscrizioni) < max_iscrizioni and tentativi < max_iscrizioni * 10:
-        persona = random.choice(persone)
-        attivita_scelta = random.choice(attivita)
-        chiave = (persona, attivita_scelta)
-        if chiave not in iscrizioni:
-            iscrizioni.add(chiave)
-        tentativi += 1
-    return [
-        {
-            "studente": studente,
-            "codice_attivita": attivita,
-            "data": genera_data_iscrizione()
-        }
-        for studente, attivita in iscrizioni
-    ]
+# 3. Carica ATTIVITA.csv (per sport)
+sport_per_attivita = {}
+with open("ATTIVITA.csv", newline='', encoding="utf-8") as f:
+    for row in csv.DictReader(f):
+        sport_per_attivita[row["codice_attivita"]] = row["sport"]
 
-def main():
-    persone = carica_persone("PERSONA.csv")
-    attivita = carica_attivita("ATTIVITA.csv")
-    iscrizioni = genera_iscrizioni(persone, attivita)
+# 4. Carica EDIZIONE_CORSO.csv
+edizioni = []
+with open("EDIZIONE_CORSO.csv", newline='', encoding="utf-8") as f:
+    edizioni = list(csv.DictReader(f))
 
-    with open("ISCRIZIONE.csv", "w", newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=["studente", "codice_attivita", "data"])
-        writer.writeheader()
-        for i in iscrizioni:
-            writer.writerow(i)
+# 5. Genera ISCRIZIONI
+iscrizioni = []
 
-if __name__ == "__main__":
-    main()
+for edizione in edizioni:
+    codice_attivita = edizione["codice_attivita"]
+    codice_edizione = edizione["codice_edizione"]
+
+    if codice_attivita not in corsi:
+        continue
+
+    corso = corsi[codice_attivita]
+    categoria = corso["categoria"]
+    sesso_corso = corso["sesso"]
+
+    eta_min, eta_max = categorie_eta.get(categoria, categorie_eta["default"])
+
+    candidati = []
+    for persona in persone:
+        eta = int(persona["eta"])
+        sesso = persona["sesso"]
+
+        if eta_min <= eta <= eta_max:
+            if sesso_corso == "U" or sesso_corso == sesso:
+                candidati.append(persona["codice_fiscale"])
+
+    n_max = int(edizione["n_partecipanti"])
+    iscritti = random.sample(candidati, min(len(candidati), n_max))
+
+    for cf in iscritti:
+        iscrizioni.append({
+            "studente": cf,
+            "codice_attivita": codice_attivita,
+            "data": edizione["data_inizio"]
+        })
+
+# 6. Scrivi ISCRIZIONE.csv
+with open("ISCRIZIONE.csv", "w", newline='', encoding="utf-8") as f:
+    writer = csv.DictWriter(f, fieldnames=["studente", "codice_attivita", "data"])
+    writer.writeheader()
+    writer.writerows(iscrizioni)
