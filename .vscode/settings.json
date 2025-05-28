@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "funzioni.h": "c",
+        "libpq-fe.h": "c"
+    }
+}

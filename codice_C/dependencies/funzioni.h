@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dependencies/include/libpq-fe.h"
+#include <sys/stat.h>
+#include "include/libpq-fe.h"
 
 void checkTuples(PGresult* res, const PGconn* conn);
 void checkCommand(PGresult *res, const PGconn *conn);
 void checkConnection(PGconn* conn);
-FILE* createFile(PGconn* conn, PGresult* res);
+FILE* createFile(PGconn* conn, PGresult* res, char* name);
 void printFile(PGresult* res, FILE* myfile);
+char* readQueryFromFile(const char* filepath);
 
 void checkTuples(PGresult *res, const PGconn *conn)
 {
@@ -46,9 +48,9 @@ void checkConnection(PGconn *conn) {
     }
 }
 
-FILE* createFile(PGconn* conn, PGresult* res) {
+FILE* createFile(PGconn* conn, PGresult* res, char* name) {
     FILE *myfile;
-    myfile = fopen("output.csv", "w");
+    myfile = fopen(name, "w");
 
     if (myfile == NULL) {
         printf("Errore nell'aprire il file CSV\n");
@@ -79,4 +81,28 @@ void printFile(PGresult* res, FILE* myfile) {
         }
         fprintf(myfile, "\n");
     }
+}
+
+// Funzione per leggere l'intero contenuto di un file in una stringa dinamica
+char* readQueryFromFile(const char* filepath) {
+    FILE *file = fopen(filepath, "r");
+    if (!file) {
+        perror("Errore nell'apertura del file SQL");
+        exit(EXIT_FAILURE);
+    }
+
+    struct stat st;
+    stat(filepath, &st);
+    long length = st.st_size;
+
+    char *query = (char*) malloc(length + 1);
+    if (!query) {
+        perror("Errore di allocazione");
+        exit(EXIT_FAILURE);
+    }
+
+    fread(query, 1, length, file);
+    query[length] = '\0'; // null-terminate
+    fclose(file);
+    return query;
 }
