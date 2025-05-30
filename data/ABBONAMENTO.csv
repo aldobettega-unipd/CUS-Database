@@ -1,43 +1,43 @@
-codice_abbonamento,tipo,sport
-AT085,periodico,Palestra
-AT086,periodico,Palestra
-AT087,periodico,Palestra
-AT088,limitato,Palestra
-AT089,limitato,Palestra
-AT090,limitato,Palestra
-AT091,limitato,Palestra
-AT092,periodico,Ping Pong
-AT093,periodico,Ping Pong
-AT094,periodico,Ping Pong
-AT095,limitato,Ping Pong
-AT096,limitato,Ping Pong
-AT097,limitato,Ping Pong
-AT098,limitato,Ping Pong
-AT099,periodico,Boxe
-AT100,periodico,Boxe
-AT101,periodico,Boxe
-AT102,limitato,Boxe
-AT103,limitato,Boxe
-AT104,limitato,Boxe
-AT105,limitato,Boxe
-AT106,periodico,Tennis
-AT107,periodico,Tennis
-AT108,periodico,Tennis
-AT109,limitato,Tennis
-AT110,limitato,Tennis
-AT111,limitato,Tennis
-AT112,limitato,Tennis
-AT113,periodico,Arrampicata
-AT114,periodico,Arrampicata
-AT115,periodico,Arrampicata
-AT116,limitato,Arrampicata
-AT117,limitato,Arrampicata
-AT118,limitato,Arrampicata
-AT119,limitato,Arrampicata
-AT120,periodico,Nuoto
-AT121,periodico,Nuoto
-AT122,periodico,Nuoto
-AT123,limitato,Nuoto
-AT124,limitato,Nuoto
-AT125,limitato,Nuoto
-AT126,limitato,Nuoto
+codice_abbonamento,tipo
+AT084,periodico
+AT085,periodico
+AT086,periodico
+AT087,limitato
+AT088,limitato
+AT089,limitato
+AT090,limitato
+AT091,periodico
+AT092,periodico
+AT093,periodico
+AT094,limitato
+AT095,limitato
+AT096,limitato
+AT097,limitato
+AT098,periodico
+AT099,periodico
+AT100,periodico
+AT101,limitato
+AT102,limitato
+AT103,limitato
+AT104,limitato
+AT105,periodico
+AT106,periodico
+AT107,periodico
+AT108,limitato
+AT109,limitato
+AT110,limitato
+AT111,limitato
+AT112,periodico
+AT113,periodico
+AT114,periodico
+AT115,limitato
+AT116,limitato
+AT117,limitato
+AT118,limitato
+AT119,periodico
+AT120,periodico
+AT121,periodico
+AT122,limitato
+AT123,limitato
+AT124,limitato
+AT125,limitato

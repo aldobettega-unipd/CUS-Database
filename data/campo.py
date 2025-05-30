@@ -23,10 +23,11 @@ def genera_campo(index, responsabili, impianti):
     responsabili.remove(responsabile)
     return {
         "codice": f"CAMPO{index:03}",
-        "prenotabile": random.choice(["true", "false"]),
-        "responsabile": responsabile,
         "via": via,
-        "comune": comune
+        "comune": comune,
+        "tariffa/h": random.choice(['', 55, 60, 75, 70, 80]),
+        "responsabile": responsabile
+        
     }
 
 # MAIN
@@ -34,7 +35,7 @@ responsabili = carica_responsabili("ISTRUTTORE.csv")
 impianti = carica_impianti("IMPIANTO_SPORTIVO.csv")
 
 with open("CAMPO.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["codice", "prenotabile", "responsabile", "via", "comune"])
+    writer = csv.DictWriter(f, fieldnames=["codice", "via", "comune", "tariffa/h", "responsabile"])
     writer.writeheader()
-    for i in range(40): 
+    for i in range(55): 
         writer.writerow(genera_campo(i+1, responsabili, impianti))

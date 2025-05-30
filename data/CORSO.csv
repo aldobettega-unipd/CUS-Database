@@ -34,51 +34,50 @@ AT032,Esordienti,U
 AT033,Cadetti,U
 AT034,Professionisti,U
 AT035,Principianti,U
-AT036,Intermedio,U
-AT037,Avanzato,U
-AT038,Cinture Bianche,U
-AT039,Cinture Colorate,U
-AT040,Cinture Nere,U
-AT041,Under 14,U
-AT042,Under 17,M
-AT043,Under 17,F
-AT044,Senior,M
-AT045,Senior,F
-AT046,Base,U
-AT047,Avanzato,U
-AT048,Under 12,U
-AT049,Under 16,M
-AT050,Under 16,F
-AT051,Under 20,M
-AT052,Under 20,F
-AT053,Prima squadra,M
-AT054,Prima squadra,F
-AT055,Amatori,M
-AT056,Agonisti,M
-AT057,Agonisti,F
-AT058,Pro,M
-AT059,Base,U
-AT060,Elite,U
-AT061,Artistico,F
-AT062,Artistico,U
-AT063,Velocità,F
-AT064,Velocità,U
-AT065,Agonistico,F
-AT066,Agonistico,U
-AT067,Under 14,U
-AT068,Under 16,M
-AT069,Under 16,F
-AT070,Under 18,M
-AT071,Under 18,F
-AT072,Prima Squadra,M
-AT073,Prima Squadra,F
-AT074,Kyu,U
-AT075,Dan,M
-AT076,Dan,F
-AT077,Cadetti,M
-AT078,Cadetti,F
-AT079,Under 14,U
-AT080,Under 18,U
-AT081,Prima squadra,M
-AT082,Prima squadra,F
-AT084,Calisthenics,U
+AT036,Avanzato,U
+AT037,Cinture Bianche,U
+AT038,Cinture Colorate,U
+AT039,Cinture Nere,U
+AT040,Under 14,U
+AT041,Under 16,M
+AT042,Under 16,F
+AT043,Senior,M
+AT044,Senior,F
+AT045,Base,U
+AT046,Avanzato,U
+AT047,Under 12,U
+AT048,Under 16,M
+AT049,Under 16,F
+AT050,Under 21,M
+AT051,Under 21,F
+AT052,Prima squadra,M
+AT053,Prima squadra,F
+AT054,Amatori,M
+AT055,Agonisti,M
+AT056,Agonisti,F
+AT057,Pro,M
+AT058,Base,U
+AT059,Elite,U
+AT060,Under 15,F
+AT061,Under 15,U
+AT062,Under 18,F
+AT063,Under 18,U
+AT064,Agonistico,F
+AT065,Agonistico,U
+AT066,Under 14,U
+AT067,Under 16,M
+AT068,Under 16,F
+AT069,Under 18,M
+AT070,Under 18,F
+AT071,Prima Squadra,M
+AT072,Prima Squadra,F
+AT073,Kyu,U
+AT074,Dan,M
+AT075,Dan,F
+AT076,Cadetti,M
+AT077,Cadetti,F
+AT078,Under 14,U
+AT079,Under 18,U
+AT080,Prima squadra,M
+AT081,Prima squadra,F
+AT083,Calisthenics,U

@@ -4,21 +4,21 @@ from collections import defaultdict
 
 # Definizione gruppi compatibili
 gruppi = {
-    "G1": ["Calcio", "Hockey su prato", "Atletica", "Ultimate Frisbee"],
-    "G2": ["Basket", "Pallavolo"],
-    "G3": ["Yoga", "Arti Marziali", "Scherma", "Boxe", "Judo"],
-    "G4": ["Palestra", "Calisthenics"],
-    "G5": ["Rugby", "Ultimate Frisbee"],
-    "G6": ["Basket"],
-    "G7": ["Pallavolo"],
-    "G8": ["Nuoto"],
-    "G9": ["Tennis"],
-    "G10": ["Atletica"],
-    "G11": ["Arrampicata"],
-    "G12": ["Boxe"],
-    "G13": ["Ping Pong"],
-    "G14": ["Pattinaggio"],
-    "G15": ["Calisthenics"]
+    "G1": ["Calcio", "Hockey su prato", "Atletica", "Ultimate Frisbee"], #7+7+3+4 = 21 
+    "G2": ["Basket", "Pallavolo"], #17
+    "G3": ["Yoga", "Arti Marziali", "Scherma", "Boxe", "Judo"], #19
+    "G4": ["Palestra", "Calisthenics"], #2
+    "G5": ["Rugby", "Ultimate Frisbee"], #11
+    "G6": ["Basket"], #9
+    "G7": ["Pallavolo"],#7
+    "G8": ["Nuoto"],#3
+    "G9": ["Tennis"],#5
+    "G10": ["Atletica"],#3
+    "G11": ["Arrampicata"],#2
+    "G12": ["Boxe"],#4
+    "G13": ["Ping Pong"],#2
+    "G14": ["Pattinaggio"],#6
+    "G15": ["Calisthenics"]#1
 }
 
 
@@ -31,21 +31,21 @@ with open("CAMPO.csv", newline='', encoding="utf-8") as f:
 random.shuffle(codici_campo)
 N = len(codici_campo)
 campi_gruppi = {
-    "G1": codici_campo[:5],
-    "G2": codici_campo[5:10],
-    "G3": codici_campo[10:13],
-    "G4": codici_campo[13:16],
-    "G5": codici_campo[16:19],
-    "G6": codici_campo[19:21],
-    "G7": codici_campo[21:23],
-    "G8": codici_campo[23:27],
-    "G9": codici_campo[27:32],
-    "G10": codici_campo[32:33],
-    "G11": codici_campo[33:36],
-    "G12": codici_campo[36:37],
-    "G13": codici_campo[37:38],
-    "G14": codici_campo[38:39],
-    "G15": codici_campo[39:40], 
+    "G1": codici_campo[:10],
+    "G2": codici_campo[10:17],
+    "G3": codici_campo[17:25],
+    "G4": codici_campo[25:28],
+    "G5": codici_campo[28:34],
+    "G6": codici_campo[34:36],
+    "G7": codici_campo[36:38],
+    "G8": codici_campo[38:41],
+    "G9": codici_campo[41:43],
+    "G10": codici_campo[43:45],
+    "G11": codici_campo[45:46],
+    "G12": codici_campo[46:48],
+    "G13": codici_campo[48:50],
+    "G14": codici_campo[50:53],
+    "G15": codici_campo[53:55], 
 }
 
 # Mappa finale: campo → lista di sport compatibili

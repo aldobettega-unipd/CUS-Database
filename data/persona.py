@@ -16,7 +16,7 @@ def genera_studenti():
     else:
         nome = fake.first_name_female()
         
-    eta = random.randint(12, 30)
+    eta = random.randint(11, 30)
     if eta >18:
         imm = random.choice(['true', 'false', 'true', 'true', 'true', 'true', 'true'])
     else:
