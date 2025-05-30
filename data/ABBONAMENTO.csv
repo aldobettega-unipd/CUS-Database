@@ -1,33 +1,43 @@
-codice_attivita
-AT108
-AT109
-AT110
-AT111
-AT112
-AT113
-AT114
-AT115
-AT116
-AT117
-AT118
-AT119
-AT120
-AT121
-AT122
-AT123
-AT124
-AT125
-AT126
-AT127
-AT128
-AT129
-AT130
-AT131
-AT132
-AT133
-AT134
-AT135
-AT136
-AT137
-AT138
-AT139
+codice_abbonamento,tipo,sport
+AT085,periodico,Palestra
+AT086,periodico,Palestra
+AT087,periodico,Palestra
+AT088,limitato,Palestra
+AT089,limitato,Palestra
+AT090,limitato,Palestra
+AT091,limitato,Palestra
+AT092,periodico,Ping Pong
+AT093,periodico,Ping Pong
+AT094,periodico,Ping Pong
+AT095,limitato,Ping Pong
+AT096,limitato,Ping Pong
+AT097,limitato,Ping Pong
+AT098,limitato,Ping Pong
+AT099,periodico,Boxe
+AT100,periodico,Boxe
+AT101,periodico,Boxe
+AT102,limitato,Boxe
+AT103,limitato,Boxe
+AT104,limitato,Boxe
+AT105,limitato,Boxe
+AT106,periodico,Tennis
+AT107,periodico,Tennis
+AT108,periodico,Tennis
+AT109,limitato,Tennis
+AT110,limitato,Tennis
+AT111,limitato,Tennis
+AT112,limitato,Tennis
+AT113,periodico,Arrampicata
+AT114,periodico,Arrampicata
+AT115,periodico,Arrampicata
+AT116,limitato,Arrampicata
+AT117,limitato,Arrampicata
+AT118,limitato,Arrampicata
+AT119,limitato,Arrampicata
+AT120,periodico,Nuoto
+AT121,periodico,Nuoto
+AT122,periodico,Nuoto
+AT123,limitato,Nuoto
+AT124,limitato,Nuoto
+AT125,limitato,Nuoto
+AT126,limitato,Nuoto

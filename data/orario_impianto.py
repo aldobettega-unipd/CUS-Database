@@ -1,11 +1,12 @@
 import csv
+import random
 
-# Giorni della settimana
-giorni_settimana = [
-    "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"
-]
 
-# Orari fissi
+giorni_settimana = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
+apertura = ['07:00', '07:30', '08:00', '08:30', '09:00']
+chiusura = ['16:30', '17:00', '17:30', '18:00', '19:00']
+
+'''
 orari_apertura = {
     "Lunedì": "07:00",
     "Martedì": "07:00",
@@ -25,29 +26,35 @@ orari_chiusura = {
     "Sabato": "13:00",
     "Domenica": "13:00"
 }
+'''
 
-# Legge impianti da IMPIANTO_SPORTIVO.csv
+
+
 impianti = []
 with open("IMPIANTO_SPORTIVO.csv", newline='', encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
-        impianti.append((row["via"], row["citta"]))
+        impianti.append((row["via"], row["comune"]))
 
-# Genera righe per ogni giorno e impianto
 righe = []
 for via, citta in impianti:
-    for giorno in giorni_settimana:
+    orario_apertura = random.choice(apertura)
+    orario_chiusura = random.choice(chiusura) 
+    for giorno in giorni_settimana: 
+        if giorno in ["Sabato", "Domenica"]:
+            orario_apertura = random.choice(apertura)
+            orario_chiusura = random.choice(chiusura) 
         righe.append({
             "via": via,
-            "citta": citta,
+            "comune": citta,
             "giorno_settimana": giorno,
-            "apertura": orari_apertura[giorno],
-            "chiusura": orari_chiusura[giorno]
+            "apertura": orario_apertura,
+            "chiusura": orario_chiusura
         })
 
-# Scrive il file CSV
+
 with open("ORARIO_IMPIANTO.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["via", "citta", "giorno_settimana", "apertura", "chiusura"])
+    writer = csv.DictWriter(f, fieldnames=["via", "comune", "giorno_settimana", "apertura", "chiusura"])
     writer.writeheader()
     for riga in righe:
         writer.writerow(riga)

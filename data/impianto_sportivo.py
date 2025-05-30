@@ -4,33 +4,23 @@ import random
 
 fake = Faker("it_IT")
 
-# Carica le università dal CSV
-def carica_universita(filename):
-    universita = []
-    with open(filename, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            universita.append(row)  # ogni row ha 'nome' e 'citta'
-    return universita
-
-def genera_impianto(universita):
-    # Scegliamo una università esistente come gestione
-    scelta_uni = random.choice(universita)
+impianti = ["Arena Vitalis", "Centro Sportivo Le Vette", "Stadio Aurora", "Palasport Zenith",  "Cittadella dello Sport"]
+comuni = ["Padova","Padova","Padova","Padova","Padova", "Albigansego", "Vigodarzere"]
+def genera_impianto(nome):
     via = fake.street_name()
-    citta = scelta_uni["citta"]  # coerente con l’università
+    comune = random.choice(comuni) 
     return {
         "via": via,
-        "citta": citta,
-        "n_campi": random.randint(1, 10),
-        "contatto_segreteria": fake.phone_number(),
-        "gestione": scelta_uni["nome"]
+        "comune": comune,
+        "nome": nome,
+        "contatto_segreteria": fake.phone_number()
     }
 
-# MAIN
-universita = carica_universita("UNIVERSITA.csv")
 
 with open("IMPIANTO_SPORTIVO.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["via", "citta", "n_campi", "contatto_segreteria", "gestione"])
+    writer = csv.DictWriter(f, fieldnames=["via", "comune", "nome", "contatto_segreteria"])
     writer.writeheader()
-    for _ in range(10):  # Genera 20 impianti sportivi
-        writer.writerow(genera_impianto(universita))
+    for nome in impianti:
+        writer.writerow(genera_impianto(nome))
+        
+

@@ -1,475 +1,79 @@
 campo,sport
-CAMPO007,Calcio
-CAMPO007,Hockey su prato
-CAMPO007,Atletica
-CAMPO007,Ultimate Frisbee
-CAMPO118,Calcio
-CAMPO118,Hockey su prato
-CAMPO118,Atletica
-CAMPO118,Ultimate Frisbee
-CAMPO140,Calcio
-CAMPO140,Hockey su prato
-CAMPO140,Atletica
-CAMPO140,Ultimate Frisbee
-CAMPO168,Calcio
-CAMPO168,Hockey su prato
-CAMPO168,Atletica
-CAMPO168,Ultimate Frisbee
-CAMPO161,Calcio
-CAMPO161,Hockey su prato
-CAMPO161,Atletica
-CAMPO161,Ultimate Frisbee
-CAMPO075,Calcio
-CAMPO075,Hockey su prato
-CAMPO075,Atletica
-CAMPO075,Ultimate Frisbee
-CAMPO052,Calcio
-CAMPO052,Hockey su prato
-CAMPO052,Atletica
-CAMPO052,Ultimate Frisbee
-CAMPO152,Calcio
-CAMPO152,Hockey su prato
-CAMPO152,Atletica
-CAMPO152,Ultimate Frisbee
-CAMPO093,Calcio
-CAMPO093,Hockey su prato
-CAMPO093,Atletica
-CAMPO093,Ultimate Frisbee
-CAMPO144,Calcio
-CAMPO144,Hockey su prato
-CAMPO144,Atletica
-CAMPO144,Ultimate Frisbee
-CAMPO070,Calcio
-CAMPO070,Hockey su prato
-CAMPO070,Atletica
-CAMPO070,Ultimate Frisbee
-CAMPO046,Calcio
-CAMPO046,Hockey su prato
-CAMPO046,Atletica
-CAMPO046,Ultimate Frisbee
-CAMPO151,Calcio
-CAMPO151,Hockey su prato
-CAMPO151,Atletica
-CAMPO151,Ultimate Frisbee
-CAMPO027,Calcio
-CAMPO027,Hockey su prato
-CAMPO027,Atletica
-CAMPO027,Ultimate Frisbee
-CAMPO169,Calcio
-CAMPO169,Hockey su prato
-CAMPO169,Atletica
-CAMPO169,Ultimate Frisbee
-CAMPO120,Calcio
-CAMPO120,Hockey su prato
-CAMPO120,Atletica
-CAMPO120,Ultimate Frisbee
-CAMPO009,Calcio
-CAMPO009,Hockey su prato
-CAMPO009,Atletica
+CAMPO034,Calcio
+CAMPO034,Hockey su prato
+CAMPO034,Atletica
+CAMPO034,Ultimate Frisbee
+CAMPO016,Calcio
+CAMPO016,Hockey su prato
+CAMPO016,Atletica
+CAMPO016,Ultimate Frisbee
+CAMPO020,Calcio
+CAMPO020,Hockey su prato
+CAMPO020,Atletica
+CAMPO020,Ultimate Frisbee
+CAMPO010,Calcio
+CAMPO010,Hockey su prato
+CAMPO010,Atletica
+CAMPO010,Ultimate Frisbee
+CAMPO026,Calcio
+CAMPO026,Hockey su prato
+CAMPO026,Atletica
+CAMPO026,Ultimate Frisbee
+CAMPO013,Basket
+CAMPO013,Pallavolo
+CAMPO012,Basket
+CAMPO012,Pallavolo
+CAMPO033,Basket
+CAMPO033,Pallavolo
+CAMPO018,Basket
+CAMPO018,Pallavolo
+CAMPO037,Basket
+CAMPO037,Pallavolo
+CAMPO002,Yoga
+CAMPO002,Arti Marziali
+CAMPO002,Scherma
+CAMPO002,Boxe
+CAMPO002,Judo
+CAMPO022,Yoga
+CAMPO022,Arti Marziali
+CAMPO022,Scherma
+CAMPO022,Boxe
+CAMPO022,Judo
+CAMPO021,Yoga
+CAMPO021,Arti Marziali
+CAMPO021,Scherma
+CAMPO021,Boxe
+CAMPO021,Judo
+CAMPO017,Palestra
+CAMPO017,Calisthenics
+CAMPO027,Palestra
+CAMPO027,Calisthenics
+CAMPO008,Palestra
+CAMPO008,Calisthenics
+CAMPO031,Rugby
+CAMPO031,Ultimate Frisbee
+CAMPO009,Rugby
 CAMPO009,Ultimate Frisbee
-CAMPO057,Calcio
-CAMPO057,Hockey su prato
-CAMPO057,Atletica
-CAMPO057,Ultimate Frisbee
-CAMPO055,Calcio
-CAMPO055,Hockey su prato
-CAMPO055,Atletica
-CAMPO055,Ultimate Frisbee
-CAMPO099,Calcio
-CAMPO099,Hockey su prato
-CAMPO099,Atletica
-CAMPO099,Ultimate Frisbee
-CAMPO132,Calcio
-CAMPO132,Hockey su prato
-CAMPO132,Atletica
-CAMPO132,Ultimate Frisbee
-CAMPO071,Calcio
-CAMPO071,Hockey su prato
-CAMPO071,Atletica
-CAMPO071,Ultimate Frisbee
-CAMPO082,Calcio
-CAMPO082,Hockey su prato
-CAMPO082,Atletica
-CAMPO082,Ultimate Frisbee
-CAMPO087,Calcio
-CAMPO087,Hockey su prato
-CAMPO087,Atletica
-CAMPO087,Ultimate Frisbee
-CAMPO039,Calcio
-CAMPO039,Hockey su prato
-CAMPO039,Atletica
-CAMPO039,Ultimate Frisbee
-CAMPO128,Calcio
-CAMPO128,Hockey su prato
-CAMPO128,Atletica
-CAMPO128,Ultimate Frisbee
-CAMPO094,Calcio
-CAMPO094,Hockey su prato
-CAMPO094,Atletica
-CAMPO094,Ultimate Frisbee
-CAMPO014,Calcio
-CAMPO014,Hockey su prato
-CAMPO014,Atletica
-CAMPO014,Ultimate Frisbee
-CAMPO032,Calcio
-CAMPO032,Hockey su prato
-CAMPO032,Atletica
-CAMPO032,Ultimate Frisbee
-CAMPO185,Calcio
-CAMPO185,Hockey su prato
-CAMPO185,Atletica
-CAMPO185,Ultimate Frisbee
-CAMPO043,Calcio
-CAMPO043,Hockey su prato
-CAMPO043,Atletica
-CAMPO043,Ultimate Frisbee
-CAMPO011,Calcio
-CAMPO011,Hockey su prato
-CAMPO011,Atletica
-CAMPO011,Ultimate Frisbee
-CAMPO197,Calcio
-CAMPO197,Hockey su prato
-CAMPO197,Atletica
-CAMPO197,Ultimate Frisbee
-CAMPO076,Calcio
-CAMPO076,Hockey su prato
-CAMPO076,Atletica
-CAMPO076,Ultimate Frisbee
-CAMPO147,Calcio
-CAMPO147,Hockey su prato
-CAMPO147,Atletica
-CAMPO147,Ultimate Frisbee
-CAMPO198,Calcio
-CAMPO198,Hockey su prato
-CAMPO198,Atletica
-CAMPO198,Ultimate Frisbee
-CAMPO004,Calcio
-CAMPO004,Hockey su prato
-CAMPO004,Atletica
-CAMPO004,Ultimate Frisbee
-CAMPO080,Calcio
-CAMPO080,Hockey su prato
-CAMPO080,Atletica
-CAMPO080,Ultimate Frisbee
-CAMPO013,Calcio
-CAMPO013,Hockey su prato
-CAMPO013,Atletica
-CAMPO013,Ultimate Frisbee
-CAMPO167,Calcio
-CAMPO167,Hockey su prato
-CAMPO167,Atletica
-CAMPO167,Ultimate Frisbee
-CAMPO176,Basket
-CAMPO176,Pallavolo
-CAMPO154,Basket
-CAMPO154,Pallavolo
-CAMPO031,Basket
-CAMPO031,Pallavolo
-CAMPO193,Basket
-CAMPO193,Pallavolo
-CAMPO172,Basket
-CAMPO172,Pallavolo
-CAMPO059,Basket
-CAMPO059,Pallavolo
-CAMPO058,Basket
-CAMPO058,Pallavolo
-CAMPO006,Basket
-CAMPO006,Pallavolo
-CAMPO017,Basket
-CAMPO017,Pallavolo
-CAMPO065,Basket
-CAMPO065,Pallavolo
-CAMPO005,Basket
-CAMPO005,Pallavolo
-CAMPO179,Basket
-CAMPO179,Pallavolo
-CAMPO045,Basket
-CAMPO045,Pallavolo
-CAMPO078,Basket
-CAMPO078,Pallavolo
-CAMPO145,Basket
-CAMPO145,Pallavolo
+CAMPO005,Rugby
+CAMPO005,Ultimate Frisbee
 CAMPO036,Basket
-CAMPO036,Pallavolo
-CAMPO189,Basket
-CAMPO189,Pallavolo
-CAMPO097,Basket
-CAMPO097,Pallavolo
-CAMPO003,Basket
-CAMPO003,Pallavolo
-CAMPO100,Basket
-CAMPO100,Pallavolo
-CAMPO115,Yoga
-CAMPO115,Arti Marziali
-CAMPO115,Scherma
-CAMPO115,Boxe
-CAMPO115,Judo
-CAMPO125,Yoga
-CAMPO125,Arti Marziali
-CAMPO125,Scherma
-CAMPO125,Boxe
-CAMPO125,Judo
-CAMPO044,Yoga
-CAMPO044,Arti Marziali
-CAMPO044,Scherma
-CAMPO044,Boxe
-CAMPO044,Judo
-CAMPO060,Yoga
-CAMPO060,Arti Marziali
-CAMPO060,Scherma
-CAMPO060,Boxe
-CAMPO060,Judo
-CAMPO079,Yoga
-CAMPO079,Arti Marziali
-CAMPO079,Scherma
-CAMPO079,Boxe
-CAMPO079,Judo
-CAMPO187,Yoga
-CAMPO187,Arti Marziali
-CAMPO187,Scherma
-CAMPO187,Boxe
-CAMPO187,Judo
-CAMPO123,Yoga
-CAMPO123,Arti Marziali
-CAMPO123,Scherma
-CAMPO123,Boxe
-CAMPO123,Judo
-CAMPO042,Yoga
-CAMPO042,Arti Marziali
-CAMPO042,Scherma
-CAMPO042,Boxe
-CAMPO042,Judo
-CAMPO160,Yoga
-CAMPO160,Arti Marziali
-CAMPO160,Scherma
-CAMPO160,Boxe
-CAMPO160,Judo
-CAMPO069,Yoga
-CAMPO069,Arti Marziali
-CAMPO069,Scherma
-CAMPO069,Boxe
-CAMPO069,Judo
-CAMPO103,Yoga
-CAMPO103,Arti Marziali
-CAMPO103,Scherma
-CAMPO103,Boxe
-CAMPO103,Judo
-CAMPO122,Yoga
-CAMPO122,Arti Marziali
-CAMPO122,Scherma
-CAMPO122,Boxe
-CAMPO122,Judo
-CAMPO142,Yoga
-CAMPO142,Arti Marziali
-CAMPO142,Scherma
-CAMPO142,Boxe
-CAMPO142,Judo
-CAMPO136,Yoga
-CAMPO136,Arti Marziali
-CAMPO136,Scherma
-CAMPO136,Boxe
-CAMPO136,Judo
-CAMPO095,Yoga
-CAMPO095,Arti Marziali
-CAMPO095,Scherma
-CAMPO095,Boxe
-CAMPO095,Judo
-CAMPO106,Yoga
-CAMPO106,Arti Marziali
-CAMPO106,Scherma
-CAMPO106,Boxe
-CAMPO106,Judo
-CAMPO196,Yoga
-CAMPO196,Arti Marziali
-CAMPO196,Scherma
-CAMPO196,Boxe
-CAMPO196,Judo
-CAMPO033,Yoga
-CAMPO033,Arti Marziali
-CAMPO033,Scherma
-CAMPO033,Boxe
-CAMPO033,Judo
-CAMPO061,Yoga
-CAMPO061,Arti Marziali
-CAMPO061,Scherma
-CAMPO061,Boxe
-CAMPO061,Judo
-CAMPO126,Yoga
-CAMPO126,Arti Marziali
-CAMPO126,Scherma
-CAMPO126,Boxe
-CAMPO126,Judo
-CAMPO194,Yoga
-CAMPO194,Arti Marziali
-CAMPO194,Scherma
-CAMPO194,Boxe
-CAMPO194,Judo
-CAMPO096,Yoga
-CAMPO096,Arti Marziali
-CAMPO096,Scherma
-CAMPO096,Boxe
-CAMPO096,Judo
-CAMPO121,Yoga
-CAMPO121,Arti Marziali
-CAMPO121,Scherma
-CAMPO121,Boxe
-CAMPO121,Judo
-CAMPO141,Yoga
-CAMPO141,Arti Marziali
-CAMPO141,Scherma
-CAMPO141,Boxe
-CAMPO141,Judo
-CAMPO008,Yoga
-CAMPO008,Arti Marziali
-CAMPO008,Scherma
-CAMPO008,Boxe
-CAMPO008,Judo
-CAMPO139,Yoga
-CAMPO139,Arti Marziali
-CAMPO139,Scherma
-CAMPO139,Boxe
-CAMPO139,Judo
-CAMPO159,Yoga
-CAMPO159,Arti Marziali
-CAMPO159,Scherma
-CAMPO159,Boxe
-CAMPO159,Judo
-CAMPO040,Yoga
-CAMPO040,Arti Marziali
-CAMPO040,Scherma
-CAMPO040,Boxe
-CAMPO040,Judo
-CAMPO119,Yoga
-CAMPO119,Arti Marziali
-CAMPO119,Scherma
-CAMPO119,Boxe
-CAMPO119,Judo
-CAMPO155,Yoga
-CAMPO155,Arti Marziali
-CAMPO155,Scherma
-CAMPO155,Boxe
-CAMPO155,Judo
-CAMPO150,Palestra
-CAMPO150,Calisthenics
-CAMPO114,Palestra
-CAMPO114,Calisthenics
-CAMPO023,Palestra
-CAMPO023,Calisthenics
-CAMPO199,Palestra
-CAMPO199,Calisthenics
-CAMPO053,Palestra
-CAMPO053,Calisthenics
-CAMPO026,Palestra
-CAMPO026,Calisthenics
-CAMPO038,Palestra
-CAMPO038,Calisthenics
-CAMPO051,Palestra
-CAMPO051,Calisthenics
-CAMPO102,Palestra
-CAMPO102,Calisthenics
-CAMPO101,Palestra
-CAMPO101,Calisthenics
-CAMPO164,Palestra
-CAMPO164,Calisthenics
-CAMPO130,Palestra
-CAMPO130,Calisthenics
-CAMPO104,Palestra
-CAMPO104,Calisthenics
-CAMPO077,Palestra
-CAMPO077,Calisthenics
-CAMPO173,Palestra
-CAMPO173,Calisthenics
-CAMPO171,Palestra
-CAMPO171,Calisthenics
-CAMPO157,Palestra
-CAMPO157,Calisthenics
-CAMPO180,Palestra
-CAMPO180,Calisthenics
-CAMPO129,Palestra
-CAMPO129,Calisthenics
-CAMPO091,Palestra
-CAMPO091,Calisthenics
-CAMPO001,Arrampicata
-CAMPO012,Arrampicata
-CAMPO137,Arrampicata
-CAMPO048,Arrampicata
-CAMPO025,Arrampicata
-CAMPO068,Arrampicata
-CAMPO149,Arrampicata
-CAMPO148,Arrampicata
-CAMPO170,Arrampicata
-CAMPO156,Arrampicata
-CAMPO002,Arrampicata
-CAMPO200,Arrampicata
-CAMPO029,Atletica Leggera
-CAMPO092,Atletica Leggera
-CAMPO028,Atletica Leggera
-CAMPO063,Atletica Leggera
-CAMPO019,Atletica Leggera
-CAMPO020,Atletica Leggera
-CAMPO022,Atletica Leggera
-CAMPO074,Atletica Leggera
-CAMPO108,Atletica Leggera
-CAMPO015,Atletica Leggera
-CAMPO049,Atletica Leggera
-CAMPO056,Atletica Leggera
-CAMPO165,Nuoto
-CAMPO163,Nuoto
-CAMPO054,Nuoto
-CAMPO066,Nuoto
-CAMPO090,Nuoto
-CAMPO030,Nuoto
-CAMPO181,Nuoto
-CAMPO116,Nuoto
-CAMPO105,Nuoto
-CAMPO089,Nuoto
-CAMPO050,Nuoto
-CAMPO034,Nuoto
-CAMPO146,Pattinaggio
-CAMPO143,Pattinaggio
-CAMPO088,Pattinaggio
-CAMPO112,Pattinaggio
-CAMPO085,Pattinaggio
-CAMPO195,Pattinaggio
-CAMPO174,Pattinaggio
-CAMPO133,Pattinaggio
-CAMPO110,Pattinaggio
-CAMPO018,Pattinaggio
-CAMPO186,Pattinaggio
-CAMPO067,Pattinaggio
-CAMPO109,Ping Pong
-CAMPO098,Ping Pong
-CAMPO183,Ping Pong
-CAMPO024,Ping Pong
-CAMPO175,Ping Pong
-CAMPO191,Ping Pong
-CAMPO184,Ping Pong
-CAMPO016,Ping Pong
-CAMPO111,Ping Pong
-CAMPO182,Ping Pong
-CAMPO062,Ping Pong
-CAMPO162,Ping Pong
-CAMPO117,Rugby
-CAMPO177,Rugby
-CAMPO086,Rugby
-CAMPO083,Rugby
-CAMPO135,Rugby
-CAMPO178,Rugby
-CAMPO041,Rugby
-CAMPO188,Rugby
-CAMPO134,Rugby
-CAMPO010,Rugby
-CAMPO190,Rugby
-CAMPO113,Rugby
-CAMPO064,Tennis
-CAMPO073,Tennis
-CAMPO131,Tennis
-CAMPO084,Tennis
-CAMPO047,Tennis
-CAMPO037,Tennis
-CAMPO124,Tennis
-CAMPO035,Tennis
-CAMPO127,Tennis
-CAMPO021,Tennis
-CAMPO158,Tennis
-CAMPO153,Tennis
+CAMPO004,Basket
+CAMPO040,Pallavolo
+CAMPO039,Pallavolo
+CAMPO015,Nuoto
+CAMPO032,Nuoto
+CAMPO024,Nuoto
+CAMPO019,Nuoto
+CAMPO006,Tennis
+CAMPO028,Tennis
+CAMPO007,Tennis
+CAMPO001,Tennis
+CAMPO003,Tennis
+CAMPO025,Atletica
+CAMPO023,Arrampicata
+CAMPO030,Arrampicata
+CAMPO038,Arrampicata
+CAMPO014,Boxe
+CAMPO035,Ping Pong
+CAMPO029,Pattinaggio
+CAMPO011,Calisthenics

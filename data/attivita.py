@@ -3,93 +3,70 @@ import csv
 # ⚙️ CONFIGURAZIONE SPORT E CATEGORIE
 config_corsi = {
     "Calcio": {
-        "categorie": ["Juniores", "Allievi", "Prima squadra"],
-        "sessi": ["M", "U"]
+        "categorie": [("Esordienti", 'U'), ("Allievi", 'M'), ("Allievi", 'F'), ("Juniores", 'M'), ("Juniores", 'F'), ("Prima squadra", 'M'), ("Prima squadra", 'F')],
     },
     "Basket": {
-        "categorie": ["Under 18", "Under 21", "Senior"],
-        "sessi": ["F", "M"]
+        "categorie": [("Under 12", "U"), ("Under 16", "F"), ("Under 16", "M"), ("Under 18", "F"), ("Under 18", "M"), ("Under 21", "F"), ("Under 21", "M"), ("Senior", "F"), ("Senior", "M")]
     },
     "Pallavolo": {
-        "categorie": ["Under 16", "Under 18", "Senior"],
-        "sessi": ["F", "M", "U"]
+        "categorie": [("Under 12", "U"), ("Under 16", "F"), ("Under 16", "M"), ("Under 18", "F"), ("Under 18", "M"), ("Senior", "F"), ("Senior", "M")]
     },
     "Nuoto": {
-        "categorie": ["Base", "Agonisti", "Master"],
-        "sessi": ["U"]
+        "categorie": [("Base", "U"), ("Agonisti", "U"), ("Master", "U")]
     },
     "Tennis": {
-        "categorie": ["Under 12", "Under 18", "Senior"],
-        "sessi": ["M", "F"]
+        "categorie": [("Under 12", "U"), ("Under 18", "M"), ("Under 18", "F"), ("Senior", "M"), ("Senior", "F")]
     },
     "Atletica": {
-        "categorie": ["Esordienti", "Cadetti", "Professionisti"],
-        "sessi": ["U"]
+        "categorie": [("Esordienti", "U"), ("Cadetti", "U"), ("Professionisti", "U")]
     },
     "Yoga": {
-        "categorie": ["Principianti", "Intermedio", "Avanzato"],
-        "sessi": ["U"]
+        "categorie": [("Principianti", "U"), ("Intermedio", "U"), ("Avanzato", "U")]
     },
     "Arti Marziali": {
-        "categorie": ["Cinture Bianche", "Cinture Colorate", "Cinture Nere"],
-        "sessi": ["M", "F", "U"]
+        "categorie": [("Cinture Bianche", "U"), ("Cinture Colorate", "U"), ("Cinture Nere", "U")]
     },
     "Scherma": {
-        "categorie": ["Under 14", "Under 17", "Senior"],
-        "sessi": ["M", "F"]
+        "categorie": [("Under 14", "U"), ("Under 17", "M"), ("Under 17", "F"), ("Senior", "M"), ("Senior", "F")]
     },
     "Arrampicata": {
-        "categorie": ["Indoor Base", "Indoor Avanzato", "Outdoor Tecnico"],
-        "sessi": ["U"]
+        "categorie": [("Base", "U"), ("Avanzato", "U")]
     },
     "Rugby": {
-        "categorie": ["Under 16", "Under 20", "Prima squadra"],
-        "sessi": ["M", "F"]
+        "categorie": [("Under 12", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Under 20", "M"), ("Under 20", "F"), ("Prima squadra", "M"), ("Prima squadra", "F")]
     },
     "Boxe": {
-        "categorie": ["Amatori", "Agonisti", "Pro"],
-        "sessi": ["M"]
+        "categorie": [("Amatori", "M"), ("Agonisti", "M"), ("Agonisti", "F"), ("Pro", "M")]
     },
     "Ping Pong": {
-        "categorie": ["Base", "Club", "Torneo"],
-        "sessi": ["U"]
+        "categorie": [("Base", "U"), ("Elite", "U")]
     },
     "Pattinaggio": {
-        "categorie": ["Artistico", "Velocità", "Agonistico"],
-        "sessi": ["F", "U"]
-    },
-    "Atletica Leggera": {
-        "categorie": ["Giovanile", "Promesse", "Elite"],
-        "sessi": ["M", "F", "U"]
+        "categorie": [("Artistico", "F"), ("Artistico", "U"), ("Velocità", "F"), ("Velocità", "U"), ("Agonistico", "F"), ("Agonistico", "U")]
     },
     "Hockey su prato": {
-        "categorie": ["Under 14", "Under 16", "Under 18", "Prima Squadra"],
-        "sessi": ["M", "F"]
+        "categorie": [("Under 14", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Under 18", "M"), ("Under 18", "F"), ("Prima Squadra", "M"), ("Prima Squadra", "F")]
     },
     "Judo": {
-        "categorie": ["Kyu", "Dan", "Cadetti"],
-        "sessi": ["M", "F", "U"]
+        "categorie": [("Kyu", "U"), ("Dan", "M"), ("Dan", "F"), ("Cadetti", "M"), ("Cadetti", "F")]
     },
     "Ultimate Frisbee": {
-        "categorie": ["Recreational", "Competitivo", "Elite"],
-        "sessi": ["U"]
+        "categorie": [("Under 14", "U"), ("Under 18", "U"), ("Prima squadra", "M"), ("Prima squadra", "F")]
     },
     "Palestra": {
-        "categorie": ["Sala Pesi", "Cardio", "Circuito Funzionale"],
-        "sessi": ["U"]
+        "categorie": [("Palestra", "U")]
     },
     "Calisthenics": {
-        "categorie": ["Base", "Intermedio", "Avanzato"],
-        "sessi": ["U"]
+        "categorie": [("Calisthenics", "U")]
     }
 }
 
-sport_abbonabili = ["Palestra", "Ping Pong", "Boxe", "Tennis"]
+sport_abbonabili = ["Palestra", "Ping Pong", "Boxe", "Tennis", "Arrampicata", "Nuoto"]
 periodi = ["Mensile", "Trimestrale", "Annuale"]
-accessi = [1, 2, 5, 10, 20]
+accessi = [5, 10, 20, 30]
 
 # 📦 Contenitori
-sport_rows = []
+
 attivita_rows = []
 corso_rows = []
 abbonamento_rows = []
@@ -99,66 +76,65 @@ accessi_rows = []
 # 🔁 Codice progressivo attività
 codice_counter = 1
 
-# Aggiungi tutti gli sport alla tabella SPORT
-for nome_sport in config_corsi.keys():
-    sport_rows.append({"nome_sport": nome_sport})
 
 # Genera attività CORSI
 for sport, info in config_corsi.items():
-    categorie = info["categorie"]
-    sessi = info["sessi"]
-    for categoria in categorie:
-        for sesso in sessi:
-            codice = f"AT{codice_counter:03}"
-            costo = round(50 + hash(codice) % 100, 2)
-            attivita_rows.append({
-                "codice_attivita": codice,
-                "costo": costo,
-                "sport": sport
-            })
-            corso_rows.append({
-                "codice_attivita": codice,
-                "categoria": categoria,
-                "sesso": sesso
-            })
-            codice_counter += 1
 
-# Genera abbonamenti: PERIODICI e LIMITATI
-for sport in sport_abbonabili:
-    for periodo in periodi:
+    categorie = info["categorie"]
+    for categoria in categorie:
         codice = f"AT{codice_counter:03}"
-        costo = round(30 + periodi.index(periodo) * 20 + hash(codice) % 30, 2)
+        costo = round(50 + hash(codice) % 100, 2)
         attivita_rows.append({
             "codice_attivita": codice,
             "costo": costo,
             "sport": sport
         })
+        codice_counter += 1
+        if sport == "Palestra":
+            continue
+        corso_rows.append({
+            "codice_corso": codice,
+            "categoria": categoria[0],
+            "sesso": categoria[1]
+        })
+        
+
+# Genera abbonamenti: PERIODICI e LIMITATI
+for sport in sport_abbonabili:
+    for periodo in periodi:
+        codice_per = f"AT{codice_counter:03}"
+        costo = round(30 + periodi.index(periodo) * 20 + hash(codice_per) % 30, 2)
+        attivita_rows.append({
+            "codice_attivita": codice_per,
+            "costo": costo,
+            "sport": sport
+        })
         abbonamento_rows.append({
-            "codice_attivita": codice,
+            "codice_abbonamento": codice_per,
             "tipo": "periodico",
             "sport": sport
         })
         periodico_rows.append({
-            "codice_attivita": codice,
+            "codice_abbonamento": codice_per,
             "periodo": periodo
         })
         codice_counter += 1
 
     for n_accessi in accessi:
-        codice = f"AT{codice_counter:03}"
-        costo = round(5 * n_accessi + hash(codice) % 10, 2)
+        codice_acc = f"AT{codice_counter:03}"
+        costo = round(5 * n_accessi + hash(codice_acc) % 10, 2)
         attivita_rows.append({
-            "codice_attivita": codice,
+            "codice_attivita": codice_acc,
             "costo": costo,
             "sport": sport
         })
         abbonamento_rows.append({
-            "codice_attivita": codice,
+            "codice_abbonamento": codice_acc,
             "tipo": "limitato",
             "sport": sport
         })
         accessi_rows.append({
-            "codice_attivita": codice,
+            "codice_abbonamento": codice_acc,
             "n_accessi": n_accessi
         })
         codice_counter += 1
@@ -170,9 +146,8 @@ def scrivi_csv(nome_file, intestazioni, righe):
         writer.writeheader()
         writer.writerows(righe)
 
-scrivi_csv("SPORT.csv", ["nome_sport"], sport_rows)
 scrivi_csv("ATTIVITA.csv", ["codice_attivita", "costo", "sport"], attivita_rows)
-scrivi_csv("CORSO.csv", ["codice_attivita", "categoria", "sesso"], corso_rows)
-scrivi_csv("ABBONAMENTO.csv", ["codice_attivita", "tipo", "sport"], abbonamento_rows)
-scrivi_csv("PERIODICO.csv", ["codice_attivita", "periodo"], periodico_rows)
-scrivi_csv("ACCESSI_LIMITATI.csv", ["codice_attivita", "n_accessi"], accessi_rows)
+scrivi_csv("CORSO.csv", ["codice_corso", "categoria", "sesso"], corso_rows)
+scrivi_csv("ABBONAMENTO.csv", ["codice_abbonamento", "tipo", "sport"], abbonamento_rows)
+scrivi_csv("PERIODICO.csv", ["codice_abbonamento", "periodo"], periodico_rows)
+scrivi_csv("ACCESSI_LIMITATI.csv", ["codice_abbonamento", "n_accessi"], accessi_rows)

@@ -1,11 +1,6 @@
-via,citta,n_campi,contatto_segreteria,gestione
-Borgo Cerquiglini,Padova,1,+39 366768903,Università di Padova
-Rotonda Bettina,Roma,7,09214090849,La Sapienza
-Rotonda Orazio,Trento,9,3378003353,Università di Trento
-Strada Mezzetta,Trento,2,0566330159,Università di Trento
-Vicolo Frescobaldi,Trento,8,+39 057892153,Università di Trento
-Strada Jolanda,Torino,7,0424978300,Politecnico di Torino
-Incrocio Donati,Milano,4,0541326373,Politecnico di Milano
-Via Paolo,Milano,7,043294229,Politecnico di Milano
-Contrada Grasso,Roma,3,+39 0771997204,La Sapienza
-Piazza Mariana,Padova,1,+39 039157427,Università di Padova
+via,comune,nome,contatto_segreteria
+Incrocio Pinamonte,Vigodarzere,Arena Vitalis,0163317737
+Viale Gritti,Padova,Centro Sportivo Le Vette,+39 03738688101
+Borgo Sante,Vigodarzere,Stadio Aurora,05574285868
+Via Patrizia,Padova,Palasport Zenith,+39 371311290
+Incrocio Ilaria,Padova,Cittadella dello Sport,+39 0566877722
