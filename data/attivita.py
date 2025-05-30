@@ -21,19 +21,19 @@ config_corsi = {
         "categorie": [("Esordienti", "U"), ("Cadetti", "U"), ("Professionisti", "U")]
     },
     "Yoga": {
-        "categorie": [("Principianti", "U"), ("Intermedio", "U"), ("Avanzato", "U")]
+        "categorie": [("Principianti", "U"), ("Avanzato", "U")]
     },
     "Arti Marziali": {
         "categorie": [("Cinture Bianche", "U"), ("Cinture Colorate", "U"), ("Cinture Nere", "U")]
     },
     "Scherma": {
-        "categorie": [("Under 14", "U"), ("Under 17", "M"), ("Under 17", "F"), ("Senior", "M"), ("Senior", "F")]
+        "categorie": [("Under 14", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Senior", "M"), ("Senior", "F")]
     },
     "Arrampicata": {
         "categorie": [("Base", "U"), ("Avanzato", "U")]
     },
     "Rugby": {
-        "categorie": [("Under 12", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Under 20", "M"), ("Under 20", "F"), ("Prima squadra", "M"), ("Prima squadra", "F")]
+        "categorie": [("Under 12", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Under 21", "M"), ("Under 21", "F"), ("Prima squadra", "M"), ("Prima squadra", "F")]
     },
     "Boxe": {
         "categorie": [("Amatori", "M"), ("Agonisti", "M"), ("Agonisti", "F"), ("Pro", "M")]
@@ -42,7 +42,7 @@ config_corsi = {
         "categorie": [("Base", "U"), ("Elite", "U")]
     },
     "Pattinaggio": {
-        "categorie": [("Artistico", "F"), ("Artistico", "U"), ("Velocità", "F"), ("Velocità", "U"), ("Agonistico", "F"), ("Agonistico", "U")]
+        "categorie": [("Under 15", "F"), ("Under 15", "U"), ("Under 18", "F"), ("Under 18", "U"), ("Agonistico", "F"), ("Agonistico", "U")]
     },
     "Hockey su prato": {
         "categorie": [("Under 14", "U"), ("Under 16", "M"), ("Under 16", "F"), ("Under 18", "M"), ("Under 18", "F"), ("Prima Squadra", "M"), ("Prima Squadra", "F")]
@@ -112,7 +112,6 @@ for sport in sport_abbonabili:
         abbonamento_rows.append({
             "codice_abbonamento": codice_per,
             "tipo": "periodico",
-            "sport": sport
         })
         periodico_rows.append({
             "codice_abbonamento": codice_per,
@@ -131,7 +130,6 @@ for sport in sport_abbonabili:
         abbonamento_rows.append({
             "codice_abbonamento": codice_acc,
             "tipo": "limitato",
-            "sport": sport
         })
         accessi_rows.append({
             "codice_abbonamento": codice_acc,
@@ -148,6 +146,6 @@ def scrivi_csv(nome_file, intestazioni, righe):
 
 scrivi_csv("ATTIVITA.csv", ["codice_attivita", "costo", "sport"], attivita_rows)
 scrivi_csv("CORSO.csv", ["codice_corso", "categoria", "sesso"], corso_rows)
-scrivi_csv("ABBONAMENTO.csv", ["codice_abbonamento", "tipo", "sport"], abbonamento_rows)
+scrivi_csv("ABBONAMENTO.csv", ["codice_abbonamento", "tipo"], abbonamento_rows)
 scrivi_csv("PERIODICO.csv", ["codice_abbonamento", "periodo"], periodico_rows)
 scrivi_csv("ACCESSI_LIMITATI.csv", ["codice_abbonamento", "n_accessi"], accessi_rows)

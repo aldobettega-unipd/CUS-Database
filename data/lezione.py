@@ -6,7 +6,7 @@ from collections import defaultdict
 # Costanti
 GIORNI_SETTIMANA = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
 ORARI_DISPONIBILI = [f"{h:02}:00" for h in range(8, 21)]  # 08:00 - 20:00
-MAX_LEZIONI = 3
+MAX_LEZIONI = 2
 
 
 with open("EDIZIONE_CORSO.csv", newline='', encoding="utf-8") as f:
@@ -42,66 +42,96 @@ for campo in campi:
     for giorno in GIORNI_SETTIMANA:
         orario_campi[campo['codice']].update({giorno : orari_imp[campo['via']][giorno]})
         
-#print(orario_campi)
 
+for g in orario_campi['CAMPO001']:
+    print('\t', g, orario_campi['CAMPO001'][g])
+        
+print()
+print()
+        
         
 lezioni = []
+campi_full = {"Lunedì":[], "Martedì":[], "Mercoledì":[], "Giovedì":[], "Venerdì":[]}
 for edizione in edizioni:
     possibili_giorni = GIORNI_SETTIMANA[:-2]
     codice_edizione = edizione["codice_edizione"]
-    codice_attivita = edizione["codice_attivita"]
+    codice_attivita = edizione["corso"]
     sport = sport_per_attivita[codice_attivita]
 
     # Trova i campi compatibili con questo sport
-    campi_validi = [c['codice'] for c in campi if sport in sport_per_campo.get(c['codice'], [])]
+    campi_validi = [c['codice'] for c in campi if (sport in sport_per_campo.get(c['codice'], []))]
+    
     if not campi_validi:
         continue  # Nessun campo disponibile per questo sport
+    for c in campi_validi:
+        for x in campi_full:
+            if c in campi_full[x]:
+                if c in campi_validi:
+                    campi_validi.remove(c)
     
     change_campo = True
     tentativi2 = 0
-    while change_campo and tentativi2 < 5*4:
+    while change_campo and tentativi2 < len(campi_validi):
         campo_scelto = random.choice(campi_validi)
         lezioni_assegnate = 0
-        tentativi = 0
-        while lezioni_assegnate < MAX_LEZIONI and tentativi < len(possibili_giorni):
-            giorno = possibili_giorni[tentativi]
+        while lezioni_assegnate < MAX_LEZIONI:
+            if campo_scelto== 'CAMPO001':
+                print('CAMPO001')
+                for g in orario_campi['CAMPO001']:
+                    print('\t', g, orario_campi['CAMPO001'][g]) 
+            giorno = random.choice(possibili_giorni)
+            while (campo_scelto in campi_full[giorno]) and not all(campo_scelto in campi_full[x] for x in campi_full):
+                giorno = random.choice(possibili_giorni)
+            if all(campo_scelto in campi_full[x] for x in campi_full):
+                tentativi2 +=1 
+                break
             #if sport in ['Nuoto', 'Arrampicata', 'Boxe', 'Pattinaggio', 'Judo', 'Atletica']:
             orario_inizio = orario_campi[campo_scelto][giorno][0]
-            orario_fine = (datetime.strptime(orario_inizio, "%H:%M") + timedelta(hours=1, minutes = 30)).strftime("%H:%M")
+            orario_fine = (datetime.strptime(orario_inizio, "%H:%M") + timedelta(hours=2)).strftime("%H:%M")
             if orario_fine > orario_campi[campo_scelto][giorno][1]:
-                print(campo_scelto, giorno, tentativi2, orario_fine, orario_campi[campo_scelto][giorno][1])
-                tentativi +=1
-                tentativi2 +=1
+                #print(campo_scelto, orario_campi[campo_scelto], giorno)
+                 
+                if campo_scelto not in campi_full[giorno]:
+                    campi_full[giorno].append(campo_scelto)
                 
                 continue
-            orario_campi[campo_scelto][giorno][0] = orario_fine
-            '''   
             else:
-                orario_fine = orario_campi[campo_scelto][giorno][1]
-                orario_inizio = (datetime.strptime(orario_fine, "%H:%M") - timedelta(hours=1, minutes = 30)).strftime("%H:%M")
-                if orario_inizio < orario_campi[campo_scelto][giorno][0]:
-                    #print(campo_scelto, giorno, tentativi2)
-                    tentativi +=1
-                    tentativi2 +=1
-                    continue
-                orario_campi[campo_scelto][giorno][1] = orario_inizio
-            '''
-            change_campo = False
-            possibili_giorni.remove(giorno)
-                
-            lezioni.append({
-                "giorno": giorno,
-                "orario_inizio": orario_inizio,
-                "orario_fine": orario_fine,
-                "campo": campo_scelto,
-                "codice_edizione": codice_edizione
-            })
-                
-            lezioni_assegnate += 1
-        
+                orario_campi[campo_scelto][giorno][0] = orario_fine
+                '''   
+                else:
+                    orario_fine = orario_campi[campo_scelto][giorno][1]
+                    orario_inizio = (datetime.strptime(orario_fine, "%H:%M") - timedelta(hours=1, minutes = 30)).strftime("%H:%M")
+                    if orario_inizio < orario_campi[campo_scelto][giorno][0]:
+                        #print(campo_scelto, giorno, tentativi2)
+                        tentativi +=1
+                        tentativi2 +=1
+                        continue
+                    orario_campi[campo_scelto][giorno][1] = orario_inizio
+                '''
+                change_campo = False
 
+                lezioni.append({
+                    "giorno": giorno,
+                    "orario_inizio": orario_inizio,
+                    "orario_fine": orario_fine,
+                    "campo": campo_scelto,
+                    "edizione_corso": codice_edizione
+                })
+                    
+                lezioni_assegnate += 1
+            
+#for o in orario_campi:
+#   print(o)
+#   for g in orario_campi[o]:
+#       print('\t', g, orario_campi[o][g])
+for g in orario_campi['CAMPO001']:
+    print('\t', g, orario_campi['CAMPO001'][g])   
+        
+        
+for lez in sorted(lezioni, key=lambda x: x["campo"]):
+    print(lez['campo'], lez['giorno'], lez['orario_inizio'], lez['orario_fine'])
 # 7. Scrivi LEZIONE.csv
 with open("LEZIONE.csv", "w", newline='', encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["giorno", "orario_inizio", "orario_fine", "campo", "codice_edizione"])
+    writer = csv.DictWriter(f, fieldnames=["giorno", "orario_inizio", "orario_fine", "campo", "edizione_corso"])
     writer.writeheader()
     writer.writerows(lezioni)

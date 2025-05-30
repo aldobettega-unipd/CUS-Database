@@ -1,127 +1,126 @@
 codice_attivita,costo,sport
-AT001,59,Calcio
-AT002,59,Calcio
-AT003,144,Calcio
-AT004,130,Calcio
-AT005,81,Calcio
-AT006,88,Calcio
-AT007,132,Calcio
-AT008,111,Basket
-AT009,59,Basket
-AT010,78,Basket
-AT011,102,Basket
-AT012,80,Basket
-AT013,119,Basket
-AT014,122,Basket
-AT015,80,Basket
-AT016,87,Basket
-AT017,67,Pallavolo
-AT018,53,Pallavolo
-AT019,128,Pallavolo
-AT020,98,Pallavolo
-AT021,66,Pallavolo
-AT022,138,Pallavolo
-AT023,147,Pallavolo
-AT024,134,Nuoto
-AT025,125,Nuoto
-AT026,109,Nuoto
-AT027,149,Tennis
-AT028,71,Tennis
-AT029,122,Tennis
-AT030,79,Tennis
-AT031,136,Tennis
-AT032,58,Atletica
-AT033,106,Atletica
-AT034,66,Atletica
-AT035,129,Yoga
-AT036,118,Yoga
-AT037,84,Yoga
-AT038,66,Arti Marziali
-AT039,108,Arti Marziali
-AT040,94,Arti Marziali
-AT041,90,Scherma
-AT042,80,Scherma
-AT043,147,Scherma
-AT044,134,Scherma
-AT045,112,Scherma
-AT046,126,Arrampicata
-AT047,128,Arrampicata
-AT048,71,Rugby
-AT049,70,Rugby
-AT050,71,Rugby
-AT051,56,Rugby
-AT052,139,Rugby
-AT053,123,Rugby
-AT054,137,Rugby
-AT055,93,Boxe
-AT056,120,Boxe
-AT057,121,Boxe
-AT058,78,Boxe
-AT059,68,Ping Pong
-AT060,111,Ping Pong
-AT061,77,Pattinaggio
-AT062,134,Pattinaggio
-AT063,51,Pattinaggio
-AT064,148,Pattinaggio
-AT065,92,Pattinaggio
-AT066,68,Pattinaggio
-AT067,81,Hockey su prato
-AT068,130,Hockey su prato
-AT069,124,Hockey su prato
-AT070,91,Hockey su prato
-AT071,108,Hockey su prato
-AT072,89,Hockey su prato
-AT073,93,Hockey su prato
-AT074,70,Judo
-AT075,101,Judo
-AT076,60,Judo
-AT077,64,Judo
-AT078,70,Judo
-AT079,144,Ultimate Frisbee
-AT080,138,Ultimate Frisbee
-AT081,89,Ultimate Frisbee
-AT082,85,Ultimate Frisbee
-AT083,85,Palestra
-AT084,86,Calisthenics
-AT085,51,Palestra
-AT086,55,Palestra
-AT087,91,Palestra
-AT088,27,Palestra
-AT089,51,Palestra
-AT090,101,Palestra
-AT091,156,Palestra
-AT092,34,Ping Pong
-AT093,59,Ping Pong
-AT094,90,Ping Pong
-AT095,32,Ping Pong
-AT096,59,Ping Pong
-AT097,106,Ping Pong
-AT098,154,Ping Pong
-AT099,31,Boxe
-AT100,79,Boxe
-AT101,72,Boxe
-AT102,32,Boxe
-AT103,51,Boxe
-AT104,105,Boxe
-AT105,157,Boxe
-AT106,55,Tennis
-AT107,59,Tennis
-AT108,85,Tennis
-AT109,26,Tennis
-AT110,51,Tennis
-AT111,104,Tennis
-AT112,156,Tennis
-AT113,54,Arrampicata
-AT114,77,Arrampicata
-AT115,95,Arrampicata
-AT116,34,Arrampicata
-AT117,56,Arrampicata
-AT118,104,Arrampicata
-AT119,153,Arrampicata
-AT120,52,Nuoto
-AT121,68,Nuoto
-AT122,85,Nuoto
-AT123,31,Nuoto
-AT124,57,Nuoto
-AT125,109,Nuoto
-AT126,152,Nuoto
+AT001,124,Calcio
+AT002,83,Calcio
+AT003,136,Calcio
+AT004,126,Calcio
+AT005,69,Calcio
+AT006,69,Calcio
+AT007,131,Calcio
+AT008,143,Basket
+AT009,111,Basket
+AT010,94,Basket
+AT011,123,Basket
+AT012,104,Basket
+AT013,55,Basket
+AT014,134,Basket
+AT015,65,Basket
+AT016,57,Basket
+AT017,146,Pallavolo
+AT018,77,Pallavolo
+AT019,115,Pallavolo
+AT020,100,Pallavolo
+AT021,90,Pallavolo
+AT022,100,Pallavolo
+AT023,112,Pallavolo
+AT024,50,Nuoto
+AT025,81,Nuoto
+AT026,61,Nuoto
+AT027,82,Tennis
+AT028,113,Tennis
+AT029,147,Tennis
+AT030,143,Tennis
+AT031,57,Tennis
+AT032,100,Atletica
+AT033,139,Atletica
+AT034,89,Atletica
+AT035,148,Yoga
+AT036,111,Yoga
+AT037,107,Arti Marziali
+AT038,139,Arti Marziali
+AT039,145,Arti Marziali
+AT040,85,Scherma
+AT041,101,Scherma
+AT042,118,Scherma
+AT043,146,Scherma
+AT044,55,Scherma
+AT045,103,Arrampicata
+AT046,149,Arrampicata
+AT047,76,Rugby
+AT048,119,Rugby
+AT049,104,Rugby
+AT050,137,Rugby
+AT051,78,Rugby
+AT052,75,Rugby
+AT053,88,Rugby
+AT054,71,Boxe
+AT055,133,Boxe
+AT056,109,Boxe
+AT057,97,Boxe
+AT058,64,Ping Pong
+AT059,56,Ping Pong
+AT060,101,Pattinaggio
+AT061,136,Pattinaggio
+AT062,128,Pattinaggio
+AT063,63,Pattinaggio
+AT064,76,Pattinaggio
+AT065,135,Pattinaggio
+AT066,56,Hockey su prato
+AT067,114,Hockey su prato
+AT068,59,Hockey su prato
+AT069,51,Hockey su prato
+AT070,60,Hockey su prato
+AT071,127,Hockey su prato
+AT072,103,Hockey su prato
+AT073,81,Judo
+AT074,66,Judo
+AT075,121,Judo
+AT076,66,Judo
+AT077,74,Judo
+AT078,131,Ultimate Frisbee
+AT079,98,Ultimate Frisbee
+AT080,114,Ultimate Frisbee
+AT081,137,Ultimate Frisbee
+AT082,126,Palestra
+AT083,94,Calisthenics
+AT084,55,Palestra
+AT085,58,Palestra
+AT086,87,Palestra
+AT087,26,Palestra
+AT088,52,Palestra
+AT089,107,Palestra
+AT090,157,Palestra
+AT091,59,Ping Pong
+AT092,70,Ping Pong
+AT093,88,Ping Pong
+AT094,28,Ping Pong
+AT095,56,Ping Pong
+AT096,107,Ping Pong
+AT097,159,Ping Pong
+AT098,47,Boxe
+AT099,77,Boxe
+AT100,75,Boxe
+AT101,29,Boxe
+AT102,59,Boxe
+AT103,100,Boxe
+AT104,159,Boxe
+AT105,52,Tennis
+AT106,51,Tennis
+AT107,90,Tennis
+AT108,29,Tennis
+AT109,53,Tennis
+AT110,107,Tennis
+AT111,158,Tennis
+AT112,43,Arrampicata
+AT113,57,Arrampicata
+AT114,74,Arrampicata
+AT115,28,Arrampicata
+AT116,59,Arrampicata
+AT117,102,Arrampicata
+AT118,154,Arrampicata
+AT119,30,Nuoto
+AT120,54,Nuoto
+AT121,87,Nuoto
+AT122,26,Nuoto
+AT123,54,Nuoto
+AT124,103,Nuoto
+AT125,159,Nuoto

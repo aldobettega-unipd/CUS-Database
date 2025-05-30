@@ -12,23 +12,21 @@ def carica_corsi(path_corsi, path_attivita):
     corsi = []
     with open(path_corsi, newline='', encoding='utf-8') as f:
         for row in csv.DictReader(f):
-            codice = row["codice_attivita"]
+            codice = row["codice_corso"]
             sport = attivita_sport.get(codice)
             if sport:
                 corsi.append({"corso": codice, "sport": sport})
     return corsi
 
-def carica_docenti(path_persone, sport_list):
+def carica_docenti(path_istruttori, sport_list):
     # Mappa sport → lista docenti
     # Per semplicità, assegna ogni docente a 1-2 sport casuali
-    with open(path_persone, newline='', encoding='utf-8') as f:
+    with open(path_istruttori, newline='', encoding='utf-8') as f:
         persone = [row["codice_fiscale"] for row in csv.DictReader(f)]
 
     sport_docenti = defaultdict(list)
-    for persona in persone:
-        sports = random.sample(sport_list, k=random.randint(1, 2))
-        for s in sports:
-            sport_docenti[s].append(persona)
+    for i, s in enumerate(sport_list):
+        sport_docenti[s] = persone[10*i:10*(i+1)]
     return sport_docenti
 
 def genera_docenza(corsi, sport_docenti):
@@ -42,12 +40,9 @@ def genera_docenza(corsi, sport_docenti):
         if not docenti_sport:
             continue
         for corso in corsi_sport:
-            docente = random.choice(docenti_sport)
-            docenze.add((docente, corso))
-            # Eventualmente assegna altri corsi allo stesso docente
-            altri_corsi = random.sample(corsi_sport, k=random.randint(0, len(corsi_sport)//3))
-            for ac in altri_corsi:
-                docenze.add((docente, ac))
+            docente = random.sample(docenti_sport, random.randint(1,2))
+            for doc in docente:
+                docenze.add((doc, corso))
     return list(docenze)
 
 def main():
@@ -55,7 +50,6 @@ def main():
     sport_list = list({c["sport"] for c in corsi})
     sport_docenti = carica_docenti("PERSONA.csv", sport_list)
     docenze = genera_docenza(corsi, sport_docenti)
-
     with open("DOCENZA.csv", "w", newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=["istruttore", "corso"])
         writer.writeheader()

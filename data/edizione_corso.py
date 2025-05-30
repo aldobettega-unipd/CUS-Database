@@ -34,7 +34,7 @@ for ed_id in range(5, 0, -1):
             "data_inizio": data_inizio.strftime("%Y-%m"),
             "data_fine": data_fine.strftime("%Y-%m"),
             "n_partecipanti": random.randint(10, 20),
-            "codice_attivita": codice_attivita
+            "corso": codice_attivita
         })
         codice+=1
 
@@ -43,7 +43,7 @@ for ed_id in range(5, 0, -1):
 # Scrittura EDIZIONE_CORSO.csv
 with open("EDIZIONE_CORSO.csv", "w", newline='', encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames=[
-        "codice_edizione", "data_inizio", "data_fine", "n_partecipanti", "codice_attivita"
+        "codice_edizione", "data_inizio", "data_fine", "n_partecipanti", "corso"
     ])
     writer.writeheader()
     writer.writerows(edizioni)
