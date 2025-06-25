@@ -1,54 +1,53 @@
-﻿UNIVERSITA (nome, citta)
+﻿PERSONA (codice_fiscale, nome, cognome, eta, sesso, immatricolato)
 
 
-PERSONA (codice_fiscale, nome, cognome, eta, sesso, universita)
-        universita → UNIVERSITA.nome
+TESSERA (persona, data, costo)
+        persona → PERSONA.codice_fiscale
 
 
-IMPIANTO SPORTIVO (via, citta, n_campi, contatto_segreteria, gestione)
-        getione → UNIVERSITA.nome
+IMPIANTO_SPORTIVO (via, comune, nome, contatto_segreteria)
 
 
-ORARIO_IMPIANTO(impianto, giorno_settimana, apertura, chiusura)
-        impianto → IMPIANTO_SPORTIVO.(via, città)
+ORARIO_IMPIANTO(via, comune, giorno_settimana, apertura, chiusura)
+        via, comune→ IMPIANTO_SPORTIVO.(via,comune)
 
 
-CAMPO (codice, prenotabile, responsabile, via, citta)
+CAMPO (codice, via, comune, tariffa/h, responsabile)
         responsabile → PERSONA.codice_fiscale
-        via, citta → IMPIANTO_SPORTIVO.(via, citta)
-
-
-SPORT (nome_sport, numero_attività)
+        via, comune → IMPIANTO_SPORTIVO.(via,comune)
 
 
 ATTIVITA (codice_attivita, costo, sport)
-        sport → SPORT.nome_sport
+
+
+ABBONAMENTO (codice_abbonamento, tipo)
+        codice_abbonamento → ATTIVITA.codice_attivita
 
 
 ACCESSI_LIMITATI (codice_abbonamento, n_accessi)
-        codice_abbonamento →ATTIVITA.codice
+        codice_abbonamento → ATTIVITA.codice
 
 
 PERIODICO (codice_abbonamento, periodo)
-        codice_abbonamento →ATTIVITA.codice_attivita
+        codice_abbonamento → ATTIVITA.codice_attivita
 
 
 CORSO (codice_corso, categoria, sesso)
         codice_corso →ATTIVITA.codice_attivita
 
 
-EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, costo, corso)
+EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, corso)
         corso → CORSO.codice
 
 
-LEZIONE (orario, giorno, campo, edizione_corso)
+LEZIONE (giorno, orario_inizio, orario_fine, campo, edizione_corso)
         campo → CAMPO.codice
         edizione_corso → EDIZIONE_CORSO.codice
 
 
 DOCENZA (istruttore, corso)
         istruttore → PERSONA.codice_fiscale
-        corso → CORSO.codice
+        corso → CORSO.codice_corso
 
 
 ISCRIZIONE (studente, codice_attivita, data)
@@ -56,16 +55,18 @@ ISCRIZIONE (studente, codice_attivita, data)
         codice_attivita →ATTIVITA.codice_attivita
 
 
-AFFITTO(persona, campo, ora_inizio, ora fine, tariffa )
+AFFITTO(persona, campo, data, ora_inizio, ora fine)
         persona → PERSONA.codice_fiscale
         campo → CAMPO.codice
 
 
+
+
 ACCESSO (campo, abbonamento)
         campo → CAMPO.codice
-        abbonamento → ATTIVITA.codice_attivita
+        abbonamento → ATTIVITA.codice_abbonamento
 
 
 COMPATIBILITA (campo, sport)
         campo → CAMPO.codice
-        sport → SPORT.nome_sport
+        sport →ATTIVITA.sport

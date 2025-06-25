@@ -1,0 +1,216 @@
+﻿Abstract
+
+
+Il progetto intende modellare una base di dati per il Centro Universitario Sportivo di Padova, salvando in una struttura ordinata i suoi impianti sportivi, campi, tesserati e attività disponibili, garantendo la coerenza dei dati. L’obbiettivo principale è quello di fornire un sistema che gestisca le lezioni dei corsi 
+
+
+Analisi dei Requisiti
+
+
+Questa sezione riassume i requisiti a cui deve sottostare la base di dati. 
+
+
+Persona. Persona contiene i dati delle persone associate al CUS, quindi persone che sono iscritte ad attività (studenti e non), docenti di corsi e gestori di campi. Contiene le seguenti informazioni:
+* codice fiscale: codice univoco della persona
+* nome, cognome, eta e sesso della persona
+* un valore di tipo booleano “immatricolato” che indica se lo studente è immatricolato con l’università di Padova
+
+
+Tessera. Tessera rappresenta l’iscrizione di uno studente al CUS e viene identificata con data di iscrizione, costo e codice fiscale della persona.
+
+
+Impianto Sportivo. Per impianto sportivo si intende un complesso di più campi. L’università di Padova è provvista di più impianti, ognuno dei quali è identificato da un indirizzo (via, comune), ci sono poi le seguenti informazioni:
+* il nome dell’impianto
+* un contatto di segreteria per ottenere informazioni su di esso
+
+
+Orario Impianto. Gli impianti sono provvisti di un calendario che indica gli orari di chiusura/apertura del giorno della settimana, questi sono differenti per impianto. Quando un impianto risulta aperto, tutti i suoi campi risultano disponibili.
+
+
+Campo. Il campo è il luogo in cui si possono svolgere le varie attività e viene identificato tramite un codice univoco. Dei campi possono ospitare attività di sport differenti (ad esempio in certi campi da basket si può giocare anche a pallavolo), mentre altri sono dedicati ad un singolo sport (ci possono essere campi solo da pallavolo che non hanno i canestri da basket), questo viene reso possibile grazie alla relazione compatibilità. Contiene poi le seguenti informazioni:
+* l’indirizzo (via, comune): indica l’impianto sportivo nel quale il campo si trova
+* una tariffa oraria che rappresenta il prezzo del campo l’ora nel caso venga prenotato. Se il campo è NULL significa che non è prevista l’opzione di poter prenotare il campo.
+* il campo responsabile che riporta il codice fiscale della persona di riferimento per il singolo campo (metto l’eta del responsabile)
+
+
+Attività. Un attività è un prodotto offerto dal CUS che può essere un corso oppure un abbonamento ad una struttura. Ogni attività è identificata da un codice univoco. Ogni attività può essere svolta in un tipo di campo grazie alla relazione compatibilita che mappa in quali campi possono essere svolte determinate attività in base al loro sport. Contiene poi le seguenti informazioni:
+* il costo dell’attività in euro
+* lo sport dell’attività: uno sport (come calcio) comprende più attività disponibili (i vari corsi)
+
+
+Abbonamento. La relazione abbonamento comprende tutte le attività che se acquistate danno un’accesso libero ad un tipo di struttura (ad esempio un tipo di abbonamento alla palestra mi darà l’accesso a tutte le palestre offerte degli impianti). Abbonamento contiene:
+* il codice univoco dell’attività abbonabile
+* tipo: indica se l’abbonamento è periodico o limitato
+Abbonamento si suddivide in periodico e limitato.
+
+
+Periodico. Un abbonamento periodico è un tipo di abbonamento che da l’accesso ad un tipo di campo per un dato periodo. Periodico contiene:
+* il codice univoco dall’attività abbonabile periodica
+* il periodo dell’abbonamento (fino ad un anno)
+
+
+Acessi Limitati. Accessi limitati invece prevede un numero finito di accessi ad un tipo di struttura. Accessi Limitati contiene:
+* il codice univoco dell’attività per la quale è prevista la modalità accessi limitati
+* il numero di accessi: per esempio se ho “ AT001 | 20 “ posso accedere 20 volte alla struttura che consente di praticare lo sport dell’attività AT001
+
+
+Corso. Corso comprende tutte le attività di tipo di corso: un corso è un insieme di lezioni strutturato con un docente, è previsto che un corso abbia un unico docente. Corso contiene:
+* il codice univoco dell’attività di tipo corso
+* la categoria del corso: indica il livello di esperienza / età
+* il sesso del corso: può essere Maschio, Femmina o Unisex
+
+
+Edizione corso. Ogni edizione di uno specifico corso è identificata da un codice edizione univoco e contiene le seguenti informazioni:
+* data inizio: il mese e l’anno di inizio edizione
+* data fine: il mese e l’anno di fine edizione
+* il numero di partecipanti di quell’edizione
+* corso: il codice del corso
+
+
+Lezione. L’entità lezione rappresenta l’orario settimanale delle lezioni di un corso e il luogo di svolgimento. Ogni lezione è identificata dal giorno della settimana, l’ora di inizio e il campo in cui si tiene. Per ogni corso sono previste due lezioni settimanali di default.
+* giorno: giorno della settimana
+* orario inizio: l’ora di inizio della lezione
+* orario fine: l’ora di fine della lezione
+* campo: il codice del campo in cui si tiene la lezione
+* edizione corso: il codice dell’edizione dello specifico corso
+Progettazione concettuale
+
+
+Di seguito il diagramma Entità-Relazione che riassume i requisiti descritti 
+  
+
+
+
+E
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Progettazione Logica
+
+
+In questa sezione viene descritto il processo di trasformazione dello schema concettuale in uno schema logico, con l’obiettivo di rappresentare i dati in maniera chiara ed efficiente. Si parte dall’analisi di eventuali ridondanze presenti nel modello, al fine di ottimizzarne la struttura complessiva. A seguire, si procede con l’eliminazione delle due generalizzazioni. Infine, viene mostrato il diagramma ristrutturato, accompagnato da una spiegazione delle modifiche effettuate.
+
+
+Analisi delle ridondanze
+
+
+testo
+
+
+Eliminazione delle generalizzazioni
+
+
+testo
+
+
+
+
+
+
+
+
+
+
+Schema relazionale
+
+
+PERSONA (codice_fiscale, nome, cognome, eta, sesso, immatricolato)
+
+
+TESSERA (persona, data, costo)
+        persona → PERSONA.codice_fiscale
+
+
+IMPIANTO SPORTIVO (via, comune, nome, contatto_segreteria)
+
+
+ORARIO_IMPIANTO(via, comune, giorno_settimana, apertura, chiusura)
+        via, comune→ IMPIANTO_SPORTIVO.(via,comune)
+
+
+CAMPO (codice, via, comune, tariffa/h, responsabile)
+        responsabile → PERSONA.codice_fiscale
+        via, comune → IMPIANTO_SPORTIVO.(via,comune)
+
+
+ATTIVITA (codice_attivita, costo, sport)
+
+
+ABBONAMENTO (codice_abbonamento, tipo)
+        codice_abbonamento → ATTIVITA.codice_attivita
+
+
+ACCESSI_LIMITATI (codice_abbonamento, n_accessi)
+        codice_abbonamento → ATTIVITA.codice
+
+
+PERIODICO (codice_abbonamento, periodo)
+        codice_abbonamento → ATTIVITA.codice_attivita
+
+
+CORSO (codice_corso, categoria, sesso)
+        codice_corso →ATTIVITA.codice_attivita
+
+
+EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, corso)
+        corso → CORSO.codice
+
+
+LEZIONE (giorno, orario_inizio, orario_fine, campo, edizione_corso)
+        campo → CAMPO.codice
+        edizione_corso → EDIZIONE_CORSO.codice
+
+
+DOCENZA (istruttore, corso)
+        istruttore → PERSONA.codice_fiscale
+        corso → CORSO.codice
+
+
+ISCRIZIONE (studente, codice_attivita, data)
+        studente → PERSONA.codice_fiscale
+        codice_attivita →ATTIVITA.codice_attivita
+
+
+AFFITTO(persona, campo, data, ora_inizio, ora fine)
+        persona → PERSONA.codice_fiscale
+        campo → CAMPO.codice
+
+
+
+
+ACCESSO (campo, abbonamento)
+        campo → CAMPO.codice
+        abbonamento → ATTIVITA.codice_abbonamento
+
+
+COMPATIBILITA (campo, sport)
+        campo → CAMPO.codice
+        sport →ATTIVITA.sport
+
+
+
+
+Implementazione in PostgreSQL e Definizione delle Query
+
+
+Il file CUS.sql contiene le istruzioni SQL necessarie per la creazione e il popolamento delle tabelle del database. Al suo interno sono incluse anche diverse query per l’estrazione delle informazioni, oltre a un indice appositamente definito per ottimizzare le prestazioni di una di queste interrogazioni.
+Definizione delle Query
+testo
+Creazione degli indici
+testo
+
+
+
+
+Applicazione software
