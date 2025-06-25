@@ -1,0 +1,72 @@
+﻿PERSONA (codice_fiscale, nome, cognome, eta, sesso, immatricolato)
+
+
+TESSERA (persona, data, costo)
+        persona → PERSONA.codice_fiscale
+
+
+IMPIANTO_SPORTIVO (via, comune, nome, contatto_segreteria)
+
+
+ORARIO_IMPIANTO(via, comune, giorno_settimana, apertura, chiusura)
+        via, comune→ IMPIANTO_SPORTIVO.(via,comune)
+
+
+CAMPO (codice, via, comune, tariffa/h, responsabile)
+        responsabile → PERSONA.codice_fiscale
+        via, comune → IMPIANTO_SPORTIVO.(via,comune)
+
+
+ATTIVITA (codice_attivita, costo, sport)
+
+
+ABBONAMENTO (codice_abbonamento, tipo)
+        codice_abbonamento → ATTIVITA.codice_attivita
+
+
+ACCESSI_LIMITATI (codice_abbonamento, n_accessi)
+        codice_abbonamento → ATTIVITA.codice
+
+
+PERIODICO (codice_abbonamento, periodo)
+        codice_abbonamento → ATTIVITA.codice_attivita
+
+
+CORSO (codice_corso, categoria, sesso)
+        codice_corso →ATTIVITA.codice_attivita
+
+
+EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, corso)
+        corso → CORSO.codice
+
+
+LEZIONE (giorno, orario_inizio, orario_fine, campo, edizione_corso)
+        campo → CAMPO.codice
+        edizione_corso → EDIZIONE_CORSO.codice
+
+
+DOCENZA (istruttore, corso)
+        istruttore → PERSONA.codice_fiscale
+        corso → CORSO.codice_corso
+
+
+ISCRIZIONE (studente, codice_attivita, data)
+        studente → PERSONA.codice_fiscale
+        codice_attivita →ATTIVITA.codice_attivita
+
+
+AFFITTO(persona, campo, data, ora_inizio, ora fine)
+        persona → PERSONA.codice_fiscale
+        campo → CAMPO.codice
+
+
+
+
+ACCESSO (campo, abbonamento)
+        campo → CAMPO.codice
+        abbonamento → ATTIVITA.codice_abbonamento
+
+
+COMPATIBILITA (campo, sport)
+        campo → CAMPO.codice
+        sport →ATTIVITA.sport

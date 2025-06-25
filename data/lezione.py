@@ -11,7 +11,7 @@ MAX_LEZIONI = 2
 
 with open("EDIZIONE_CORSO.csv", newline='', encoding="utf-8") as f:
     edizioni = [row for row in csv.DictReader(f)
-                if datetime.strptime(row["data_fine"], "%Y-%m").year in [2025]]
+                if datetime.strptime(row["data_fine"], "%Y-%m-%d").year in [2025]]
 
 
 # 3. Carica ATTIVITA.csv per sapere lo sport del corso

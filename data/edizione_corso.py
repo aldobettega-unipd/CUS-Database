@@ -12,11 +12,11 @@ with open("CORSO.csv", newline='', encoding="utf-8") as f:
 def genera_data_inizio(ed_id):
     mese = random.choice([9, 10, 11, 12, 1])
     anno = 2025-ed_id if mese != 1 else 2026-ed_id
-    start = datetime.strptime(f"{anno}-{mese:02}", "%Y-%m")
+    start = datetime.strptime(f"{anno}-{mese:02}-1", "%Y-%m-%d")
     delta = random.randint(5, 9)
     end_mese = (delta+mese)%13
     end_anno = anno+1 if delta+mese>12 else anno
-    end = datetime.strptime(f"{end_anno}-{end_mese}", "%Y-%m")
+    end = datetime.strptime(f"{end_anno}-{end_mese}-1", "%Y-%m-%d")
     return start, end
 
 # Generazione delle edizioni
@@ -31,8 +31,8 @@ for ed_id in range(5, 0, -1):
         data_inizio, data_fine = genera_data_inizio(ed_id)
         edizioni.append({
             "codice_edizione": f'ED{data_inizio.strftime("%Y"):04}{codice:03}',
-            "data_inizio": data_inizio.strftime("%Y-%m"),
-            "data_fine": data_fine.strftime("%Y-%m"),
+            "data_inizio": data_inizio.strftime("%Y-%m-%d"),
+            "data_fine": data_fine.strftime("%Y-%m-%d"),
             "n_partecipanti": random.randint(10, 20),
             "corso": codice_attivita
         })
