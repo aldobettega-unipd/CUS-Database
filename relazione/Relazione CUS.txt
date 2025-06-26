@@ -16,7 +16,7 @@ Persona. Persona contiene i dati delle persone associate al CUS, quindi persone 
 * un valore di tipo booleano “immatricolato” che indica se lo studente è immatricolato con l’università di Padova
 
 
-Tessera. Tessera rappresenta l’iscrizione di uno studente al CUS e viene identificata con data di iscrizione, costo e codice fiscale della persona.
+Tessera. Tessera rappresenta l’iscrizione di uno studente al CUS e viene identificata con data di iscrizione, costo (risulta gratuita se lo studente è immatricolato, altrimenti ha un costo di default) e codice fiscale della persona.
 
 
 Impianto Sportivo. Per impianto sportivo si intende un complesso di più campi. L’università di Padova è provvista di più impianti, ognuno dei quali è identificato da un indirizzo (via, comune), ci sono poi le seguenti informazioni:
@@ -29,12 +29,12 @@ Orario Impianto. Gli impianti sono provvisti di un calendario che indica gli ora
 
 Campo. Il campo è il luogo in cui si possono svolgere le varie attività e viene identificato tramite un codice univoco. Dei campi possono ospitare attività di sport differenti (ad esempio in certi campi da basket si può giocare anche a pallavolo), mentre altri sono dedicati ad un singolo sport (ci possono essere campi solo da pallavolo che non hanno i canestri da basket), questo viene reso possibile grazie alla relazione compatibilità. Contiene poi le seguenti informazioni:
 * l’indirizzo (via, comune): indica l’impianto sportivo nel quale il campo si trova
-* una tariffa oraria che rappresenta il prezzo del campo l’ora nel caso venga prenotato. Se il campo è NULL significa che non è prevista l’opzione di poter prenotare il campo.
+* una tariffa oraria che rappresenta il prezzo nel caso in cui venga prenotato. Se il campo “tariffa oraria” è NULL significa che non è prevista l’opzione di poter prenotare il campo.
 * il campo responsabile che riporta il codice fiscale della persona di riferimento per il singolo campo (metto l’eta del responsabile)
 
 
-Attività. Un attività è un prodotto offerto dal CUS che può essere un corso oppure un abbonamento ad una struttura. Ogni attività è identificata da un codice univoco. Ogni attività può essere svolta in un tipo di campo grazie alla relazione compatibilita che mappa in quali campi possono essere svolte determinate attività in base al loro sport. Contiene poi le seguenti informazioni:
-* il costo dell’attività in euro
+Attività. Un attività è un prodotto offerto dal CUS che può essere un corso oppure un abbonamento ad una struttura. Ogni attività è identificata da un codice univoco. Ogni attività può essere svolta in un tipo di campo grazie alla relazione compatibilità che mappa in quali campi possono essere svolte determinate attività in base al loro sport. Contiene poi le seguenti informazioni:
+* il costo dell’attività
 * lo sport dell’attività: uno sport (come calcio) comprende più attività disponibili (i vari corsi)
 
 
@@ -60,30 +60,20 @@ Corso. Corso comprende tutte le attività di tipo di corso: un corso è un insie
 * il sesso del corso: può essere Maschio, Femmina o Unisex
 
 
-Edizione corso. Ogni edizione di uno specifico corso è identificata da un codice edizione univoco e contiene le seguenti informazioni:
-* data inizio: il mese e l’anno di inizio edizione
-* data fine: il mese e l’anno di fine edizione
-* il numero di partecipanti di quell’edizione
-* corso: il codice del corso
-
-
 Lezione. L’entità lezione rappresenta l’orario settimanale delle lezioni di un corso e il luogo di svolgimento. Ogni lezione è identificata dal giorno della settimana, l’ora di inizio e il campo in cui si tiene. Per ogni corso sono previste due lezioni settimanali di default.
 * giorno: giorno della settimana
 * orario inizio: l’ora di inizio della lezione
 * orario fine: l’ora di fine della lezione
 * campo: il codice del campo in cui si tiene la lezione
-* edizione corso: il codice dell’edizione dello specifico corso
+
+
 Progettazione concettuale
 
 
 Di seguito il diagramma Entità-Relazione che riassume i requisiti descritti 
   
 
-
-
-E
-
-
+Il CUS di Padova è formato da più impianti sportivi
 
 
 
@@ -163,13 +153,9 @@ CORSO (codice_corso, categoria, sesso)
         codice_corso →ATTIVITA.codice_attivita
 
 
-EDIZIONE_CORSO (codice_edizione, data_inizio, data_fine, n_partecipanti, corso)
-        corso → CORSO.codice
-
-
-LEZIONE (giorno, orario_inizio, orario_fine, campo, edizione_corso)
+LEZIONE (giorno, orario_inizio, orario_fine, campo, corso)
         campo → CAMPO.codice
-        edizione_corso → EDIZIONE_CORSO.codice
+        corso → CORSO.codice_corso
 
 
 DOCENZA (istruttore, corso)
